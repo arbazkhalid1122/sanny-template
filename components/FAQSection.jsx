@@ -34,7 +34,7 @@ export default function FAQSection() {
 
   return (
     <section id="faq" className="py-20 px-6">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-3xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -51,9 +51,9 @@ export default function FAQSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <Accordion type="single" collapsible className="space-y-4">
+          <Accordion type="single" collapsible className="space-y-1">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border-gray-800">
+              <AccordionItem key={index} value={`item-${index}`} className="border-gray-800 bg-[#18191b] rounded-lg px-4">
                 <AccordionTrigger className="text-left text-white hover:text-yellow-400 transition-colors">
                   {faq.question}
                 </AccordionTrigger>

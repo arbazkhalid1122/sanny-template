@@ -6,16 +6,16 @@ import { fadeInUp, staggerContainer } from "@/lib/animations"
 
 export default function TeamSection() {
   const teamMembers = [
-    { name: "Rich Purnell", role: "AI Strategist", image: "/placeholder.svg?height=200&width=200" },
-    { name: "Beth Johanssen", role: "Lead Developer", image: "/placeholder.svg?height=200&width=200" },
-    { name: "Chris Beck", role: "Data Scientist", image: "/placeholder.svg?height=200&width=200" },
-    { name: "Mindy Park", role: "UX Designer", image: "/placeholder.svg?height=200&width=200" },
-    { name: "Mitch Henderson", role: "Project Manager", image: "/placeholder.svg?height=200&width=200" },
+    { name: "Rich Purnell", role: "AI Strategist", image: "https://framerusercontent.com/images/vsqaVVSOt24ZjOHD92GX1UlOk.jpg" },
+    { name: "Beth Johanssen", role: "Lead Developer", image: "https://framerusercontent.com/images/Cj52wiyjVMP2WjhpeFuPbvAlA.jpg" },
+    { name: "Chris Beck", role: "Data Scientist", image: "https://framerusercontent.com/images/Uf0aLKyvoAM6NzaszJ4FdqH0.jpg" },
+    { name: "Mindy Park", role: "UX Designer", image: "https://framerusercontent.com/images/wP8LhRlUFlIdZq32oaXMYvymZA.jpg" },
+    { name: "Mitch Henderson", role: "Project Manager", image: "https://framerusercontent.com/images/yQASPf1jpSHPX5roGXM8eOLdE.jpg" },
   ]
 
   return (
     <section id="team" className="py-20 px-6">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-3xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -31,14 +31,14 @@ export default function TeamSection() {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="grid md:grid-cols-3 lg:grid-cols-5 gap-8"
+          className="flex flex-wrap gap-1 justify-start space-y-4"
         >
           {teamMembers.map((member, index) => (
             <motion.div
               key={index}
               variants={fadeInUp}
               whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-              className="text-center"
+              className="text-center min-w-[200px] max-w-[250px]"
             >
               <div className="relative mb-4 overflow-hidden rounded-2xl">
                 <img

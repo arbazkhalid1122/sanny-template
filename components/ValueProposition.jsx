@@ -47,7 +47,7 @@ const AnimatedText = ({ text, className = "" }) => {
 export default function ValueProposition() {
   return (
     <section className="py-20 px-6">
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-3xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

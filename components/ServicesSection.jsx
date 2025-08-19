@@ -79,7 +79,7 @@ export default function ServicesSection() {
         ≡
       </motion.div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-3xl mx-auto relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -31,7 +31,7 @@ export default function PricingSection() {
 
   return (
     <section id="pricing" className="py-20 px-6">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-3xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -58,10 +58,10 @@ export default function PricingSection() {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-8 max-w-4xl"
+          className="grid md:grid-cols-2 gap-1 max-w-4xl"
         >
           <motion.div variants={scaleIn}>
-            <Card className="bg-gray-900 border-gray-800 h-full">
+            <Card className="bg-[#18191B] border-gray-800 h-full">
               <CardContent className="p-8">
                 <h3 className="text-lg font-medium mb-2 text-gray-300">Starter</h3>
                 <div className="text-4xl font-bold mb-1 text-white">$3,899 USD</div>
@@ -107,27 +107,33 @@ export default function PricingSection() {
           </motion.div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mt-12"
-        >
-          <Card className="bg-gray-900 border-gray-800 max-w-md">
-            <CardContent className="p-8">
-              <h3 className="text-lg font-bold mb-2 text-white">Custom offer</h3>
-              <p className="text-gray-400 text-sm mb-6">Want fix pricing? Tell us more about you project</p>
+    <motion.div
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+  className="mt-2 w-full"
+>
+  <Card className="bg-[#18191B] border-gray-800 w-full">
+    <CardContent className="p-8">
+      <h3 className="text-lg font-bold mb-2 text-white">Custom offer</h3>
+      <p className="text-gray-400 text-sm mb-6">
+        Want fixed pricing? Tell us more about your project
+      </p>
 
-              <div className="space-y-4">
-                <Button className="w-full bg-gray-800 text-white hover:bg-gray-700 rounded-lg">Book call</Button>
-                <p className="text-gray-400 text-xs text-center">
-                  or mail us at <span className="text-white">hey@sanny.ai</span>
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-        </motion.div>
+      <div className="flex gap-4 items-center">
+        <Button className="w-full sm:w-auto bg-white text-black hover:bg-gray-700 rounded-lg">
+          Book call
+        </Button>
+        <p className="text-gray-400 text-xs">
+          or mail us at <span className="text-white">hey@sanny.ai</span>
+        </p>
+      </div>
+    </CardContent>
+  </Card>
+</motion.div>
+
+
       </div>
     </section>
   )

@@ -9,7 +9,6 @@ import ServicesSection from "@/components/ServicesSection"
 import Testimonials from "@/components/Testimonials"
 import PricingSection from "@/components/PricingSection"
 import SuccessStories from "@/components/SuccessStories"
-import Features from "@/components/Features"
 import TeamSection from "@/components/TeamSection"
 import FAQSection from "@/components/FAQSection"
 import Footer from "@/components/Footer"
@@ -26,7 +25,6 @@ export default function SannyLandingPage() {
       <Testimonials />
       <PricingSection />
       <SuccessStories />
-      <Features />
       <TeamSection />
       <FAQSection />
       <Footer />

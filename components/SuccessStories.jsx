@@ -12,7 +12,7 @@ export default function SuccessStories() {
       description: "AI automation of childcare for a kindergarten",
       percentage: "~48%",
       metric: "Time and resource savings",
-      image: "/placeholder.svg?height=320&width=300",
+      image: "https://images.pexels.com/photos/2033933/pexels-photo-2033933.jpeg",
       alt: "Child running on playground",
     },
     {
@@ -20,14 +20,30 @@ export default function SuccessStories() {
       description: "Development of AI generation functions for startup",
       percentage: "~27%",
       metric: "Time and resource savings",
-      image: "/placeholder.svg?height=320&width=300",
+      image: "https://images.pexels.com/photos/2983226/pexels-photo-2983226.jpeg",
+      alt: "Abstract colorful digital pattern",
+    },
+        {
+      title: "SPICE® AI",
+      description: "Development of AI generation functions for startup",
+      percentage: "~27%",
+      metric: "Time and resource savings",
+      image: "https://images.pexels.com/photos/2983226/pexels-photo-2983226.jpeg",
+      alt: "Abstract colorful digital pattern",
+    },
+        {
+      title: "SPICE® AI",
+      description: "Development of AI generation functions for startup",
+      percentage: "~27%",
+      metric: "Time and resource savings",
+      image: "https://images.pexels.com/photos/2983226/pexels-photo-2983226.jpeg",
       alt: "Abstract colorful digital pattern",
     },
   ]
 
   return (
     <section id="case-studies" className="py-20 px-6">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-3xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -43,12 +59,12 @@ export default function SuccessStories() {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-6"
+          className="grid md:grid-cols-2 gap-1"
         >
           {stories.map((story, index) => (
             <motion.div key={index} variants={fadeInUp}>
-              <Card className="bg-gray-900 border-gray-800 overflow-hidden h-80">
-                <div className="flex h-full">
+              <Card className="bg-gray-900 border-gray-800 overflow-hidden h-80 p-0 rounded-4xl">
+                <div className="flex h-full p-0">
                   {/* Left half - Text content */}
                   <div className="flex-1 p-8 flex flex-col justify-between">
                     <div>
@@ -61,7 +77,7 @@ export default function SuccessStories() {
                     </div>
                   </div>
                   {/* Right half - Image */}
-                  <div className="flex-1">
+                  <div className="flex-1 p-0 h-full">
                     <img
                       src={story.image}
                       alt={story.alt}
@@ -72,6 +88,7 @@ export default function SuccessStories() {
               </Card>
             </motion.div>
           ))}
+          
         </motion.div>
       </div>
     </section>
