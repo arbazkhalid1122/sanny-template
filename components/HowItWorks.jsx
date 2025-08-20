@@ -41,13 +41,13 @@ export default function HowItWorks() {
 
   return (
     <section className="py-20 px-6">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold mb-16"
+          className="text-3xl md:text-3xl mb-16"
         >
           How it works?
         </motion.h2>
@@ -61,9 +61,9 @@ export default function HowItWorks() {
         >
           {steps.map((item, index) => (
             <motion.div key={index} variants={scaleIn}>
-              <Card className={`${item.bg} border-0 h-full p-0`}>
-                <CardContent className="p-8">
-                  <div className="text-sm font-medium mb-16 opacity-70">{item.step}</div>
+              <Card className={`${item.bg} rounded-4xl border-0 h-full p-0`}>
+                <CardContent className="p-10">
+                  <div className={`text-md font-bold mb-36 opacity-70 border-1 ${index === 0 ? 'border-black' : 'border-white'} w-[fit-content] rounded-2xl pl-1 pr-1`}>{item.step}</div>
                   <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
                   <p className="leading-relaxed opacity-80">{item.description}</p>
                   {item.icon && <div className="mt-6 text-4xl opacity-30">{item.icon}</div>}

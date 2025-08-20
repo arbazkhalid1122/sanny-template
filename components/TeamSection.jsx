@@ -15,7 +15,7 @@ export default function TeamSection() {
 
   return (
     <section id="team" className="py-20 px-6">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -38,7 +38,7 @@ export default function TeamSection() {
               key={index}
               variants={fadeInUp}
               whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-              className="text-center min-w-[200px] max-w-[250px]"
+              className="text-center min-w-[250px] max-w-[300px]"
             >
               <div className="relative mb-4 overflow-hidden rounded-2xl">
                 <img

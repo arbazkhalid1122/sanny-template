@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 
 import { staggerContainer, scaleIn } from "@/lib/animations"
 
-export default function ServicesSection() {
+export default function ServicesSection2() {
   const [direction, setDirection] = useState(0) // +1 = scroll down, -1 = scroll up
 
   useEffect(() => {
@@ -43,36 +43,10 @@ export default function ServicesSection() {
     { top: "35%", left: "40%" },
   ]
 
-
-  const positions1 = [
-    { bottom: "10%", left: "45%" },
-    { bottom: "14%", left: "70%" },
-    { bottom: "16%", left: "35%" },
-    { bottom: "15%", left: "20%" },
-    { bottom: "17%", left: "55%" },
-    { bottom: "19%", left: "40%" },
-  ]
-
-
-
   return (
-    <section id="services" className="py-20 px-6 relative overflow-hidden pb-56">
+    <section id="services" className="py-20 px-6 relative overflow-hidden">
       {/* Background floating icons */}
       <div className="absolute inset-0 pointer-events-none z-0">
-        {icons.map((icon, i) => (
-          <motion.div
-            key={i}
-            animate={{ y: direction === 1 ? -30 : 30 }}
-            transition={{ type: "spring", stiffness: 60, damping: 20 }}
-            className={`absolute w-16 h-16 bg-gradient-to-br ${icon.bg} rounded-2xl flex items-center justify-center text-3xl shadow-lg`}
-            style={positions1[i % positions.length]}
-          >
-            {icon.symbol}
-          </motion.div>
-        ))}
-      </div>
-
-          <div className="absolute inset-0 pointer-events-none z-0">
         {icons.map((icon, i) => (
           <motion.div
             key={i}
@@ -87,7 +61,7 @@ export default function ServicesSection() {
       </div>
 
       {/* Content */}
-      <div className="max-w-5xl mx-auto relative z-10">
+      <div className="max-w-3xl mx-auto relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -105,7 +79,7 @@ export default function ServicesSection() {
           viewport={{ once: true }}
           className="grid md:grid-cols-3 gap-12"
         >
-          {["Business process automation", "Integrate AI into your company’s data", "AI-powered apps development", "AI-powered apps development", "AI-powered apps development", "AI-powered apps development"].map((service, index) => (
+          {["Business process automation", "Integrate AI into your company’s data", "AI-powered apps development"].map((service, index) => (
             <motion.div key={index} variants={scaleIn}>
               <div className="space-y-6">
                 <h3 className="text-xl font-bold mb-4 text-white">{service}</h3>

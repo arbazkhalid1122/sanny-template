@@ -13,7 +13,7 @@ export default function Testimonials() {
       content:
         "According to our observations, the bakery started saving about 33 working days per quarter.",
       reply: "Good to hear. Great result.",
-      avatar: "/placeholder.svg?height=40&width=40",
+      // avatar: "/placeholder.svg?height=40&width=40",
       backgroundImage: "https://images.pexels.com/photos/33459951/pexels-photo-33459951.jpeg",
     },
     {
@@ -36,7 +36,7 @@ export default function Testimonials() {
 
   return (
     <section className="py-20 px-6">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

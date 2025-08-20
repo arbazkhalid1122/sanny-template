@@ -22,8 +22,8 @@ export default function SannyLandingPage() {
       <ValueProposition />
       <TrustedBy />
       <HowItWorks />
-      <SuitableSection />
       <ServicesSection />
+      <SuitableSection />
       <Testimonials />
       <PricingSection />
       <SuccessStories />

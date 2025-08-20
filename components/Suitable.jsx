@@ -36,7 +36,7 @@ export default function SuitableSection() {
   
 return (
     <section className="relative bg-black text-white" ref={ref}>
-        <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Left side - pinned */}
             <div
                 className={`h-fit self-start pt-32 w-[250px] ${

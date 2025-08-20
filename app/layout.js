@@ -1,35 +1,29 @@
+import "./globals.css"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
-import { Manrope } from "next/font/google"
-import "./globals.css"
-import CustomCursor from "@/components/cursor"
+import { Playwrite_CA } from "next/font/google"
 
-const manrope = Manrope({ subsets: ["latin"] })
+// configure Playwrite CA
+const playwriteCA = Playwrite_CA({
+  subsets: ["latin"],
+  variable: "--font-playwrite",
+  weight: ["100", "200", "300", "400"], // choose weights you need
+})
 
 export const metadata = {
   title: "v0 App",
   description: "Created with v0",
-  generator: "v0.app",
 }
 
 export default function RootLayout({
   children,
 }) {
   return (
-    <html lang="en" className={`${GeistSans.variable} ${manrope.variable} antialiased`}>
-      <head>
-        <style>{`
-html {
-  font-family: ${GeistSans.style.fontFamily};
-  --font-sans: ${GeistSans.variable};
-  --font-mono: ${GeistMono.variable};
-}
-        `}</style>
-      </head>
-      <body>
-        {/* <CustomCursor /> */}
-        {children}
-      </body>
+    <html
+      lang="en"
+      className={`${GeistSans.variable} ${GeistMono.variable} ${playwriteCA.variable} antialiased`}
+    >
+      <body>{children}</body>
     </html>
   )
 }

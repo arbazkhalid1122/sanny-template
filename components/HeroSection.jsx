@@ -1,78 +1,132 @@
-"use client"
-
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { ChevronUp } from "lucide-react"
-
-import { fadeInUp, staggerContainer } from "@/lib/animations"
+import { Button } from "@/components/ui/button";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { ChevronDown } from "lucide-react";
+// import avatar1 from "@/assets/avatar-1.jpg";
+// import avatar2 from "@/assets/avatar-2.jpg";
+// import avatar3 from "@/assets/avatar-3.jpg";
+import { MdArrowDownward } from "react-icons/md";
 
 export default function HeroSection() {
   return (
-    <section className="pt-6 pb-20 px-6 relative">
-      <div className="absolute inset-0 pointer-events-none" />
+    <section className="pt-6 pb-20 px-20 relative">
+      <div className="max-w-8xl mx-auto">
+        <div 
+          className="rounded-3xl px-12 py-20 relative overflow-hidden"
+          style={{ 
+            background: 'linear-gradient(180deg,#0f1112 50.999999046325684%,#acb3b6)',
+            // boxShadow: '0 25px 50px -12px hsl(220 25% 3% / 0.8)'
+            boxShadow: 'rgba(220, 220, 220, 0.4) 0px 5px, #a5acaf 0px 10px, rgba(220, 220, 220, 0.2) 0px 15px, rgba(220, 220, 220, 0.1) 0px 20px, rgba(220, 220, 220, 0.05) 0px 25px'
+            }}
+          >
 
-      <div className="max-w-6xl rounded-4xl px-18 py-30 mx-auto relative bg-gradient-to-b from-[#0f1112] to-gray-500">
-        <div className="max-w-[800px] text-start mx-auto ">
+            {/* Background decoration */}
+          <div className="absolute inset-0 bg-gradient-to-r from-lime-400/5 via-transparent to-transparent blur-3xl pointer-events-none" />
+          
+          <div className="max-w-5xl mx-auto z-10 mt-16">
+            {/* Main heading */}
+            <div 
+              className="space-y-8 "
+              style={{ 
+                animation: 'slideUp 0.8s ease-out 0s forwards'
+              }}
+            >
+              <h1 className="text-6xl md:text-7xl lg:text-9xl font-bold leading-tight" style={{
+                lineHeight: 0.9,
+                letterSpacing: '-0.04em'
+              }}>
+                <span 
+                  className="block"
+                  style={{ 
+                    background: 'linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(0 0% 85%) 50%, hsl(0 0% 70%) 100%)',
+                    WebkitBackgroundClip: 'text',
+                    backgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent'
+                  }}
+                >
+                  AI Services
+                </span>
+                <span 
+                  className="block"
+                  style={{ 
+                    background: 'linear-gradient(135deg, hsl(0 0% 80%) 0%, hsl(0 0% 65%) 50%, hsl(0 0% 50%) 100%)',
+                    WebkitBackgroundClip: 'text',
+                    backgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent'
+                  }}
+                >
+                  for your Business
+                </span>
+                <span 
+                  className="block"
+                  style={{ 
+                    background: 'linear-gradient(135deg, hsl(0 0% 80%) 0%, hsl(0 0% 65%) 50%, hsl(0 0% 50%) 100%)',
+                    WebkitBackgroundClip: 'text',
+                    backgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent'
+                  }}
+                >
+                  Growth
+                </span>
+              </h1>
 
-          <motion.div variants={staggerContainer} initial="initial" animate="animate" className="space-y-8">
-            <motion.h1 variants={fadeInUp} className="text-6xl md:text-8xl font-bold leading-tight max-w-4xl relative">
-              <span className="bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent drop-shadow-2xl">
-                AI Services
-              </span>
-              <br />
-              <span className="bg-gradient-to-r from-gray-200 via-gray-300 to-gray-400 bg-clip-text text-transparent">
-                for your Business
-              </span>
-              <br />
-              <span className="bg-gradient-to-r from-gray-200 via-gray-300 to-gray-400 bg-clip-text text-transparent">
-                Growth
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-white/5 via-transparent to-transparent blur-3xl -z-10" />
-            </motion.h1>
-
-            <motion.p variants={fadeInUp} className="text-lg text-gray-300 max-w-2xl">
-              We'll pump your company with AI. As a leading AI automation agency with 39 years of experience, we deliver
-              top results.
-            </motion.p>
-
-            <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-start gap-8">
-              <Button className="bg-lime-400 text-black hover:bg-lime-500 px-8 py-3 text-base font-medium rounded-lg">
-                Subscribe now
-              </Button>
-
-              <Button
-                variant="outline"
-                className="border-gray-600 text-white hover:bg-gray-800 px-8 py-3 text-base rounded-lg bg-transparent"
+              {/* Description */}
+              <p 
+                className="text-lg md:text-xl text-[#ffffffcc] max-w-2xl"
+                style={{ 
+                  animation: 'fadeIn 0.6s ease-out 0.2s forwards'
+                }}
               >
-                Our services
-              </Button>
+                We'll pump your company with AI. As a leading AI automation agency with 39 years of experience, we deliver top results.
+              </p>
 
-              <div className="flex items-center space-x-4">
-                <div className="flex flex-col">
-                  <span className="text-gray-400 text-sm">Loved by founders</span>
-                  <span className="text-gray-400 text-sm">worldwide</span>
+              {/* CTA Buttons and Social Proof */}
+              <div 
+                className="flex flex-col lg:flex-row items-start gap-8"
+                style={{ 
+                  animation: 'fadeIn 0.6s ease-out 0.3s forwards'
+                }}
+              >
+                {/* Buttons */}
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button size="lg" className='bg-[#dbea39] text-black hover:bg-[#dbea39]/90 cursor-pointer'>
+                    Subscribe now
+                  </Button>
+                  <Button variant="hero-outline" size="lg">
+                    Our services
+                  </Button>
                 </div>
-                <div className="flex -space-x-2">
-                  <Avatar className="w-8 h-8 border-2 border-black">
-                    <AvatarImage src="/placeholder.svg?height=32&width=32" />
-                    <AvatarFallback>F1</AvatarFallback>
-                  </Avatar>
-                  <Avatar className="w-8 h-8 border-2 border-black">
-                    <AvatarImage src="/placeholder.svg?height=32&width=32" />
-                    <AvatarFallback>F2</AvatarFallback>
-                  </Avatar>
-                  <Avatar className="w-8 h-8 border-2 border-black">
-                    <AvatarImage src="/placeholder.svg?height=32&width=32" />
-                    <AvatarFallback>F3</AvatarFallback>
-                  </Avatar>
+
+                {/* Social Proof */}
+                <div className="flex items-center gap-4">
+                  <div className="flex flex-col text-sm text-[#ffffffcc]">
+                    <span className="">Loved by founders</span>
+                    <span className="">worldwide</span>
+                  </div>
+                  <div className="flex -space-x-2">
+                    <Avatar className="w-8 h-8 border-zinc-900 z-10">
+                      <AvatarImage src="https://framerusercontent.com/images/TaqY8Xv55oL11NawZDD2ZWT0PQ.jpg" alt="Founder 1" />
+                      <AvatarFallback className="bg-lime-400 text-zinc-900">F1</AvatarFallback>
+                    </Avatar>
+                    <Avatar className="w-8 h-8 border-zinc-900 z-9">
+                      <AvatarImage src="https://framerusercontent.com/images/v4sk80ioxCwonE6GI6DEo9CMH4.jpg" alt="Founder 2" />
+                      <AvatarFallback className="bg-lime-400 text-zinc-900">F2</AvatarFallback>
+                    </Avatar>
+                    <Avatar className="w-8 h-8 border-zinc-900 z-8">
+                      <AvatarImage src="https://framerusercontent.com/images/rpQllM97VuwSi50MereUoX8ZA.jpg" alt="Founder 3" />
+                      <AvatarFallback className="bg-lime-400 text-zinc-900">F3</AvatarFallback>
+                    </Avatar>
+                    <Avatar className="w-8 h-8 border-zinc-900 z-7">
+                      <AvatarImage src="https://framerusercontent.com/images/vB3bbUG9dVlFFmQiBgN0z2YhDjA.jpg" alt="Founder 4" />
+                      <AvatarFallback className="bg-lime-400 text-zinc-900">F4</AvatarFallback>
+                    </Avatar>
+                  </div>
+                  <MdArrowDownward className="w-8 h-8 p-1 text-[#ffffff] bg-[#8a8f92] rounded-full"/>
                 </div>
-                <ChevronUp className="w-4 h-4 text-gray-400 rotate-180" />
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
