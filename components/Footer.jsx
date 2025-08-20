@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <div className="bg-black text-white flex flex-col items-center justify-center py-16 px-6">
-      <div className="max-w-3xl w-full space-y-6">
+      <div className="max-w-5xl w-full space-y-6">
         {/* Heading */}
         <h2 className="text-xl font-semibold text-start">Still not sure?</h2>
 

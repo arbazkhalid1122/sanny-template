@@ -34,7 +34,7 @@ export default function FAQSection() {
 
   return (
     <section id="faq" className="py-20 px-6">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
