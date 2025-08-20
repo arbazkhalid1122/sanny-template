@@ -12,6 +12,7 @@ import SuccessStories from "@/components/SuccessStories"
 import TeamSection from "@/components/TeamSection"
 import FAQSection from "@/components/FAQSection"
 import Footer from "@/components/Footer"
+import SuitableSection from "@/components/Suitable"
 
 export default function SannyLandingPage() {
   return (
@@ -21,6 +22,7 @@ export default function SannyLandingPage() {
       <ValueProposition />
       <TrustedBy />
       <HowItWorks />
+      <SuitableSection />
       <ServicesSection />
       <Testimonials />
       <PricingSection />

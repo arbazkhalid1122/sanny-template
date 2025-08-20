@@ -27,7 +27,7 @@ html {
         `}</style>
       </head>
       <body>
-        <CustomCursor />
+        {/* <CustomCursor /> */}
         {children}
       </body>
     </html>

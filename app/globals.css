@@ -131,13 +131,13 @@
 }
 
 /* Added custom large cursor styling */
-* {
+/* * {
   cursor: none;
 }
 
 body {
   cursor: none;
-}
+} */
 
 body::before {
   content: "";

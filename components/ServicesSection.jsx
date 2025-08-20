@@ -1,84 +1,92 @@
 "use client"
 
-import { motion, useScroll, useTransform } from "framer-motion"
-import { useRef } from "react"
+import { motion } from "framer-motion"
+import { useEffect, useState } from "react"
 
 import { staggerContainer, scaleIn } from "@/lib/animations"
 
 export default function ServicesSection() {
-  const servicesRef = useRef(null)
+  const [direction, setDirection] = useState(0) // +1 = scroll down, -1 = scroll up
 
-  const { scrollYProgress } = useScroll({
-    target: servicesRef,
-    offset: ["start end", "end start"],
-  })
+  useEffect(() => {
+    let lastScrollY = window.scrollY
 
-  const y1 = useTransform(scrollYProgress, [0, 1], [0, -30])
-  const y2 = useTransform(scrollYProgress, [0, 1], [0, 20])
-  const y3 = useTransform(scrollYProgress, [0, 1], [0, -50])
-  const y4 = useTransform(scrollYProgress, [0, 1], [0, 25])
-  const y5 = useTransform(scrollYProgress, [0, 1], [0, -15])
+    const updateScrollDir = () => {
+      const scrollY = window.scrollY
+      if (Math.abs(scrollY - lastScrollY) > 2) {
+        setDirection(scrollY > lastScrollY ? 1 : -1)
+        lastScrollY = scrollY > 0 ? scrollY : 0
+      }
+    }
 
-  const services = [
-    {
-      number: "1",
-      title: "Business process automation",
-      description:
-        "Let AI handle repetitive tasks and workflows. Improve efficiency, minimize errors, and free up time for strategic work, ultimately driving cost savings.",
-    },
-    {
-      number: "2",
-      title: "Integrate AI into your company's data",
-      description:
-        "Our AI automation services empower you to leverage data-driven automation, and use predictive analytics to support informed decision-making.",
-    },
-    {
-      number: "3",
-      title: "AI-powered apps development",
-      description:
-        "We develop apps that deliver personalized, real-time insights and transform user experiences, including AI chatbots, image recognition for augmented reality, and predictive analytics for top-tier recommendations.",
-    },
+    window.addEventListener("scroll", updateScrollDir)
+    return () => window.removeEventListener("scroll", updateScrollDir)
+  }, [])
+
+  // Example icons (replace with your own icons/images if needed)
+  const icons = [
+    { symbol: "✦", bg: "from-purple-500 to-pink-400" },
+    { symbol: "≡", bg: "from-blue-500 to-cyan-400" },
+    { symbol: "◉", bg: "from-green-500 to-lime-400" },
+    { symbol: "◆", bg: "from-yellow-500 to-orange-400" },
+    { symbol: "⬤", bg: "from-red-500 to-pink-400" },
+    { symbol: "✿", bg: "from-teal-500 to-green-400" },
   ]
 
+  // Pre-defined scattered positions (you can adjust)
+  const positions = [
+    { top: "10%", left: "45%" },
+    { top: "5%", left: "70%" },
+    { top: "0%", left: "35%" },
+    { top: "20%", left: "20%" },
+    { top: "15%", left: "55%" },
+    { top: "35%", left: "40%" },
+  ]
+
+
+  const positions1 = [
+    { bottom: "10%", left: "45%" },
+    { bottom: "14%", left: "70%" },
+    { bottom: "16%", left: "35%" },
+    { bottom: "15%", left: "20%" },
+    { bottom: "17%", left: "55%" },
+    { bottom: "19%", left: "40%" },
+  ]
+
+
+
   return (
-    <section id="services" className="py-20 px-6 relative overflow-hidden" ref={servicesRef}>
-      <motion.div
-        style={{ y: y1 }}
-        className="absolute top-20 left-20 w-16 h-16 bg-yellow-400 rounded-2xl flex items-center justify-center text-2xl z-0 rotate-12 shadow-lg"
-      >
-        ✦
-      </motion.div>
+    <section id="services" className="py-20 px-6 relative overflow-hidden pb-56">
+      {/* Background floating icons */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        {icons.map((icon, i) => (
+          <motion.div
+            key={i}
+            animate={{ y: direction === 1 ? -30 : 30 }}
+            transition={{ type: "spring", stiffness: 60, damping: 20 }}
+            className={`absolute w-16 h-16 bg-gradient-to-br ${icon.bg} rounded-2xl flex items-center justify-center text-3xl shadow-lg`}
+            style={positions1[i % positions.length]}
+          >
+            {icon.symbol}
+          </motion.div>
+        ))}
+      </div>
 
-      <motion.div
-        style={{ y: y2 }}
-        className="absolute top-32 right-20 w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-2xl z-0 -rotate-12 shadow-lg"
-      >
-        <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center">
-          <div className="w-4 h-4 bg-white rounded-full"></div>
-        </div>
-      </motion.div>
+          <div className="absolute inset-0 pointer-events-none z-0">
+        {icons.map((icon, i) => (
+          <motion.div
+            key={i}
+            animate={{ y: direction === 1 ? -30 : 30 }}
+            transition={{ type: "spring", stiffness: 60, damping: 20 }}
+            className={`absolute w-16 h-16 bg-gradient-to-br ${icon.bg} rounded-2xl flex items-center justify-center text-3xl shadow-lg`}
+            style={positions[i % positions.length]}
+          >
+            {icon.symbol}
+          </motion.div>
+        ))}
+      </div>
 
-      <motion.div
-        style={{ y: y3 }}
-        className="absolute top-60 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gray-700 rounded-2xl flex items-center justify-center text-2xl z-0 rotate-45 shadow-lg"
-      >
-        <div className="w-8 h-8 border-2 border-white rounded-full"></div>
-      </motion.div>
-
-      <motion.div
-        style={{ y: y4 }}
-        className="absolute bottom-20 right-32 w-16 h-16 bg-gradient-to-br from-red-400 via-pink-400 to-blue-400 rounded-2xl flex items-center justify-center text-2xl z-0 -rotate-12 shadow-lg"
-      >
-        <div className="w-6 h-6 bg-white rounded transform rotate-45"></div>
-      </motion.div>
-
-      <motion.div
-        style={{ y: y5 }}
-        className="absolute top-80 left-10 w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center text-white z-0 rotate-12 shadow-lg"
-      >
-        ≡
-      </motion.div>
-
+      {/* Content */}
       <div className="max-w-3xl mx-auto relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -97,18 +105,13 @@ export default function ServicesSection() {
           viewport={{ once: true }}
           className="grid md:grid-cols-3 gap-12"
         >
-          {services.map((service, index) => (
+          {["Business process automation", "Integrate AI into your company’s data", "AI-powered apps development", "AI-powered apps development", "AI-powered apps development", "AI-powered apps development"].map((service, index) => (
             <motion.div key={index} variants={scaleIn}>
               <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="text-gray-500 text-sm mt-1 bg-gray-800 rounded-full w-6 h-6 flex items-center justify-center">
-                    {service.number}
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-4 text-white">{service.title}</h3>
-                    <p className="text-gray-400 leading-relaxed text-sm">{service.description}</p>
-                  </div>
-                </div>
+                <h3 className="text-xl font-bold mb-4 text-white">{service}</h3>
+                <p className="text-gray-400 leading-relaxed text-sm">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                </p>
               </div>
             </motion.div>
           ))}
