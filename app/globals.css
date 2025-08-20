@@ -177,7 +177,7 @@ body::before {
 }
 
 /* Added hover effects for interactive elements */
-button:hover,
+/* button:hover,
 a:hover,
 [role="button"]:hover {
   transform: scale(1.05);
@@ -188,7 +188,7 @@ button:hover::before,
 a:hover::before,
 [role="button"]:hover::before {
   transform: scale(1.5);
-}
+} */
 
 
 

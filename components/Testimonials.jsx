@@ -13,17 +13,29 @@ export default function Testimonials() {
       content:
         "According to our observations, the bakery started saving about 33 working days per quarter.",
       reply: "Good to hear. Great result.",
-      // avatar: "/placeholder.svg?height=40&width=40",
-      backgroundImage: "https://images.pexels.com/photos/33459951/pexels-photo-33459951.jpeg",
+      replyName: "Sanny AI",
+      avatar: "https://framerusercontent.com/images/TaqY8Xv55oL11NawZDD2ZWT0PQ.jpg",
+      backgroundImage: "https://framerusercontent.com/images/SCTm5DcMFWv510sxMAG4sbisRAY.jpg?scale-down-to=1024",
     },
     {
       name: "Bruce Ng",
       role: "Co-founder and CEO of SPICE AI",
+      replyName: "Sanny AI",
       content:
         "We came to Sanny AI agency with just an idea on a piece of paper.",
       reply: "Amazing progress! Keep it up.",
-      avatar: "/placeholder.svg?height=40&width=40",
-      backgroundImage: "https://images.pexels.com/photos/12895567/pexels-photo-12895567.jpeg",
+      avatar: "https://framerusercontent.com/images/v4sk80ioxCwonE6GI6DEo9CMH4.jpg",
+      backgroundImage: "https://framerusercontent.com/images/zx8SH6CouNCKAphe45IT6cPgc.jpg?scale-down-to=1024",
+    },
+    {
+      name: "Bruce Ng",
+      role: "Co-founder and CEO of SPICE AI",
+      replyName: "Sanny AI",
+      content:
+        "We came to Sanny AI agency with just an idea on a piece of paper.",
+      reply: "Amazing progress! Keep it up.",
+      avatar: "https://framerusercontent.com/images/rpQllM97VuwSi50MereUoX8ZA.jpg",
+      backgroundImage: "https://framerusercontent.com/images/RvmvxP2U7fqKYhLfiqIwUfUH5c.jpg?scale-down-to=1024",
     },
   ]
 
@@ -43,18 +55,16 @@ export default function Testimonials() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Testimonials</h2>
-          <p className="text-gray-400 mb-12">
-            Our services are loved by founders around the world. Here’s what they have to say.
-          </p>
-
-          {/* Testimonial Card */}
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Testimonials</h2>
+          <p className="text-gray-400 text-lg mb-14 max-w-lg">
+Our services are loved by founders around the all world. We are proud to work with emerging talents, innovative startups and companies.          </p>
           <div
             className="relative rounded-2xl min-w-3xl flex items-end"
             style={{
               backgroundImage: `url(${testimonials[currentTestimonial].backgroundImage})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
+              minHeight: "500px", // Increased height (was likely less before)
             }}
           >
             {/* Overlay gradient */}
@@ -71,21 +81,20 @@ export default function Testimonials() {
               <div className="space-y-4 w-full">
                 {/* Left-aligned testimonial */}
                 <div className="flex justify-end">
-                <div className="bg-gray-900/80 text-white rounded-xl p-4 text-base md:text-lg leading-relaxed max-w-[300px]">
-                  <span className="block font-semibold mb-1">{testimonials[currentTestimonial].name}</span>
-                  {testimonials[currentTestimonial].content}
-                </div>
+                  <div className="bg-gray-900/80 text-white rounded-xl p-4 text-base md:text-lg leading-relaxed w-[300px]">
+                    <span className="block text-sm mb-1 text-white/80">{testimonials[currentTestimonial].name}</span>
+                    {testimonials[currentTestimonial].content}
+                  </div>
                 </div>
 
-                {/* Right-aligned reply */}
                 <div className="flex justify-end">
-                  <div className="bg-white/80 text-gray-900 rounded-xl p-4 text-base md:text-lg leading-relaxed max-w-[300px]">
+                  <div className="bg-white/50 text-white rounded-xl p-4 text-base md:text-lg leading-relaxed w-[300px]">
+                    <span className="block text-sm mb-1 text-white/80">{testimonials[currentTestimonial].replyName}</span>
                     {testimonials[currentTestimonial].reply}
                   </div>
                 </div>
               </div>
 
-              {/* Avatar + Name */}
               <div className="flex items-center space-x-4">
                 <Avatar className="w-12 h-12 border-2 border-white">
                   <AvatarImage src={testimonials[currentTestimonial].avatar} />

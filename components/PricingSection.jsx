@@ -47,65 +47,67 @@ export default function PricingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
-          className="text-gray-400 mb-16"
+          className="text-gray-400 text-lg mb-14 max-w-lg"
         >
           One monthly fee, no surprises. Simple pricing with no hidden costs, just ongoing AI automation support when
           you need it.
         </motion.p>
 
-        <motion.div
-          variants={staggerContainer}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-1 max-w-4xl"
-        >
-          <motion.div variants={scaleIn}>
-            <Card className="bg-[#18191B] border-gray-800 h-full">
-              <CardContent className="p-8">
-                <h3 className="text-lg font-medium mb-2 text-gray-300">Starter</h3>
-                <div className="text-4xl font-bold mb-1 text-white">$3,899 USD</div>
-                <div className="text-gray-300 text-sm mb-8">per month</div>
+    <motion.div
+  variants={staggerContainer}
+  initial="initial"
+  whileInView="animate"
+  viewport={{ once: true }}
+  className="grid md:grid-cols-2 gap-1 w-full max-w-none"
+>
+  <motion.div variants={scaleIn}>
+    <Card className="bg-[#18191B] border-gray-800 h-full w-full rounded-4xl">
+      <CardContent className="p-8">
+        <h3 className="text-lg font-medium mb-2 text-gray-300">Starter</h3>
+        <div className="text-6xl font-bold mb-1 text-white">3,899 USD</div>
+        <div className="text-gray-300 text-sm mb-8 mt-2">per month</div>
 
-                <Button className="w-full bg-gray-800 text-white hover:bg-gray-700 mb-8 rounded-lg">
-                  Get started
-                </Button>
+        <Button className="w-[fit-content] bg-white text-black mb-8 rounded-lg text-md font-bold p-8 mt-6 mb-8">
+          Get started
+        </Button>
 
-                <ul className="space-y-3">
-                  {starterFeatures.map((feature, index) => (
-                    <li key={index} className="flex items-start space-x-3">
-                      <div className="w-1 h-1 bg-gray-400 rounded-full mt-2 flex-shrink-0" />
-                      <span className="text-gray-300 text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          </motion.div>
+        <ul className="space-y-3 border-t pt-6 border-gray-700">
+          {starterFeatures.map((feature, index) => (
+            <li key={index} className="flex items-start space-x-3">
+              <div className="w-2 h-2 border border-gray-400 rounded-full mt-2 flex-shrink-0" />
+              <span className="text-gray-300 text-lg">{feature}</span>
+            </li>
+          ))}
+        </ul>
+      </CardContent>
+    </Card>
+  </motion.div>
 
-          <motion.div variants={scaleIn}>
-            <Card className="bg-white text-black h-full">
-              <CardContent className="p-8">
-                <h3 className="text-lg font-medium mb-2 text-gray-600">Master</h3>
-                <div className="text-4xl font-bold mb-1">$13,899 USD</div>
-                <div className="text-gray-600 text-sm mb-8">per month</div>
+   <motion.div variants={scaleIn}>
+    <Card className="bg-white border-gray-800 h-full w-full rounded-4xl">
+      <CardContent className="p-8">
+        <h3 className="text-lg font-medium mb-2 text-[#050607]">Master</h3>
+        <div className="text-6xl font-bold mb-1 text-black">3,899 USD</div>
+        <div className="text-[#050607] text-sm mb-8 mt-2">per month</div>
 
-                <Button className="w-full bg-lime-400 text-black hover:bg-lime-500 mb-8 rounded-lg">
-                  Get started
-                </Button>
+        <Button className="w-[fit-content] bg-[#dbea39] text-black mb-8 rounded-lg text-md font-bold p-8 mt-6 mb-8">
+          Get started
+        </Button>
 
-                <ul className="space-y-3">
-                  {masterFeatures.map((feature, index) => (
-                    <li key={index} className="flex items-start space-x-3">
-                      <div className="w-1 h-1 bg-gray-600 rounded-full mt-2 flex-shrink-0" />
-                      <span className="text-gray-600 text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          </motion.div>
-        </motion.div>
+        <ul className="space-y-3 border-t pt-6 border-gray-700">
+          {masterFeatures.map((feature, index) => (
+            <li key={index} className="flex items-start space-x-3">
+              <div className="w-2 h-2 border border-gray-400 rounded-full mt-2 flex-shrink-0" />
+              <span className="text-[#050607] text-lg">{feature}</span>
+            </li>
+          ))}
+        </ul>
+      </CardContent>
+    </Card>
+  </motion.div>
+
+</motion.div>
+
 
     <motion.div
   initial={{ opacity: 0, y: 30 }}
@@ -114,19 +116,19 @@ export default function PricingSection() {
   viewport={{ once: true }}
   className="mt-2 w-full"
 >
-  <Card className="bg-[#18191B] border-gray-800 w-full">
-    <CardContent className="p-8">
-      <h3 className="text-lg font-bold mb-2 text-white">Custom offer</h3>
-      <p className="text-gray-400 text-sm mb-6">
+  <Card className="bg-[#18191B] border-gray-800 w-full rounded-4xl p-0">
+    <CardContent className="p-12">
+      <h3 className="text-2xl font-semibold mb-2 text-white">Custom offer</h3>
+      <p className="text-gray-300 text-lg mb-6">
         Want fixed pricing? Tell us more about your project
       </p>
 
-      <div className="flex gap-4 items-center">
-        <Button className="w-full sm:w-auto bg-white text-black hover:bg-gray-700 rounded-lg">
+      <div className="flex gap-4 items-center mt-12">
+        <Button className="w-full sm:w-auto bg-white text-black hover:bg-gray-700 rounded-lg p-7 text-lg font-semibold">
           Book call
         </Button>
-        <p className="text-gray-400 text-xs">
-          or mail us at <span className="text-white">hey@sanny.ai</span>
+        <p className="text-gray-300 text-lg">
+          or mail us at <span className="text-gray-300 underline">hey@sanny.ai</span>
         </p>
       </div>
     </CardContent>

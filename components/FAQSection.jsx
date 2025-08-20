@@ -40,10 +40,13 @@ export default function FAQSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold mb-16"
+          className="text-4xl md:text-4xl font-semi-bold mb-6"
         >
           FAQ
         </motion.h2>
+        <p className="text-gray-400 text-lg mb-14 max-w-lg">
+          Do you have more questions? We have prepared some answers for you. But if you need more, just <span className="underline">Book a call</span> or mail us <span className="underline">hey@sanny.ai</span>
+        </p>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -51,13 +54,13 @@ export default function FAQSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <Accordion type="single" collapsible className="space-y-1">
+          <Accordion type="single" collapsible className="space-y-[2px]">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border-gray-800 bg-[#18191b] rounded-lg px-4">
-                <AccordionTrigger className="text-left text-white hover:text-yellow-400 transition-colors">
+              <AccordionItem key={index} value={`item-${index}`} className="border-gray-800 bg-[#18191b] rounded-lg px-6 pt-2">
+                <AccordionTrigger className="text-left text-white text-lg">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-gray-400">{faq.answer}</AccordionContent>
+                <AccordionContent className="text-gray-400 text-lg">{faq.answer}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
