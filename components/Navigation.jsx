@@ -1,15 +1,20 @@
+"use client"
+
 import { Button } from "@/components/ui/button";
-import { ChevronUp } from "lucide-react";
+import { ChevronUp, Menu, X } from "lucide-react";
+import { useState } from "react";
 
 export default function Navigation() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <nav 
-      className="fixed top-10 w-full z-50 "
+      className="fixed top-10 w-full z-50"
       style={{ 
         animation: 'fadeIn 0.6s ease-out 0s forwards'
       }}
     >
-      <div className="max-w-5xl mx-auto py-6">
+      <div className="max-w-5xl mx-auto py-6 px-4 sm:px-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div 
@@ -25,7 +30,7 @@ export default function Navigation() {
             <ChevronUp className="w-4 h-4 text-zinc-400" />
           </div>
 
-          {/* Navigation Links */}
+          {/* Desktop Navigation Links */}
           <div 
             className="hidden md:flex items-center rounded-full pl-6 border"
             style={{ 
@@ -55,7 +60,77 @@ export default function Navigation() {
               Buy now
             </Button>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden flex items-center justify-center w-12 h-12 rounded-full border"
+            style={{ 
+              background: '#343637',
+              backdropFilter: 'blur(20px)',
+              borderColor: 'hsl(0 0% 100% / 0.1)'
+            }}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6 text-white" />
+            ) : (
+              <Menu className="w-6 h-6 text-white" />
+            )}
+          </button>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div 
+            className="md:hidden mt-4 rounded-2xl border p-6"
+            style={{ 
+              background: '#343637',
+              backdropFilter: 'blur(20px)',
+              borderColor: 'hsl(0 0% 100% / 0.1)'
+            }}
+          >
+            <div className="flex flex-col space-y-4">
+              <a 
+                href="#services" 
+                className="text-white text-lg font-medium py-2 border-b border-white/10"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Services
+              </a>
+              <a 
+                href="#pricing" 
+                className="text-white text-lg font-medium py-2 border-b border-white/10"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Pricing
+              </a>
+              <a 
+                href="#case-studies" 
+                className="text-white text-lg font-medium py-2 border-b border-white/10"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Case studies
+              </a>
+              <a 
+                href="#team" 
+                className="text-white text-lg font-medium py-2 border-b border-white/10"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Team
+              </a>
+              <a 
+                href="#faq" 
+                className="text-white text-lg font-medium py-2 border-b border-white/10"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                FAQ
+              </a>
+              <Button className="bg-white text-black hover:bg-white/90 rounded-full px-6 py-3 h-12 text-lg font-semibold mt-4">
+                Buy now
+              </Button>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );

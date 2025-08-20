@@ -13,6 +13,7 @@ const playwriteCA = Playwrite_CA({
 export const metadata = {
   title: "v0 App",
   description: "Created with v0",
+  viewport: "width=device-width, initial-scale=1",
 }
 
 export default function RootLayout({
@@ -23,6 +24,9 @@ export default function RootLayout({
       lang="en"
       className={`${GeistSans.variable} ${GeistMono.variable} ${playwriteCA.variable} antialiased`}
     >
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body>{children}</body>
     </html>
   )

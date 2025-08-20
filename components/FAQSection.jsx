@@ -33,18 +33,18 @@ export default function FAQSection() {
   ]
 
   return (
-    <section id="faq" className="py-20 px-6">
+    <section id="faq" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
       <div className="max-w-5xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-4xl font-semi-bold mb-6"
+          className="text-2xl sm:text-3xl md:text-4xl font-semi-bold mb-4 sm:mb-6"
         >
           FAQ
         </motion.h2>
-        <p className="text-gray-400 text-lg mb-14 max-w-lg">
+        <p className="text-gray-400 text-base sm:text-lg mb-10 sm:mb-14 max-w-lg">
           Do you have more questions? We have prepared some answers for you. But if you need more, just <span className="underline">Book a call</span> or mail us <span className="underline">hey@sanny.ai</span>
         </p>
 
@@ -56,11 +56,11 @@ export default function FAQSection() {
         >
           <Accordion type="single" collapsible className="space-y-[2px]">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border-gray-800 bg-[#18191b] rounded-lg px-6 pt-2">
-                <AccordionTrigger className="text-left text-white text-lg">
+              <AccordionItem key={index} value={`item-${index}`} className="border-gray-800 bg-[#18191b] rounded-lg px-4 sm:px-6 pt-2">
+                <AccordionTrigger className="text-left text-white text-base sm:text-lg">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-gray-400 text-lg">{faq.answer}</AccordionContent>
+                <AccordionContent className="text-gray-400 text-sm sm:text-lg">{faq.answer}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>

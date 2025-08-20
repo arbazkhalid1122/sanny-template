@@ -8,10 +8,10 @@ import { MdArrowDownward } from "react-icons/md";
 
 export default function HeroSection() {
   return (
-    <section className="pt-6 pb-20 px-20 relative">
+    <section className="pt-6 pb-20 px-4 sm:px-8 md:px-12 lg:px-20 relative">
       <div className="max-w-8xl mx-auto">
         <div 
-          className="rounded-3xl px-12 py-20 relative overflow-hidden"
+          className="rounded-3xl px-6 sm:px-8 md:px-12 py-12 sm:py-16 md:py-20 relative overflow-hidden"
           style={{ 
             background: 'linear-gradient(180deg,#0f1112 50.999999046325684%,#acb3b6)',
             // boxShadow: '0 25px 50px -12px hsl(220 25% 3% / 0.8)'
@@ -22,15 +22,15 @@ export default function HeroSection() {
             {/* Background decoration */}
           <div className="absolute inset-0 bg-gradient-to-r from-lime-400/5 via-transparent to-transparent blur-3xl pointer-events-none" />
           
-          <div className="max-w-5xl mx-auto z-10 mt-16">
+          <div className="max-w-5xl mx-auto z-10 mt-8 sm:mt-12 md:mt-16">
             {/* Main heading */}
             <div 
-              className="space-y-8 "
+              className="space-y-6 sm:space-y-8"
               style={{ 
                 animation: 'slideUp 0.8s ease-out 0s forwards'
               }}
             >
-              <h1 className="text-6xl md:text-7xl lg:text-9xl font-bold leading-tight" style={{
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-9xl font-bold leading-tight" style={{
                 lineHeight: 0.9,
                 letterSpacing: '-0.04em'
               }}>
@@ -71,7 +71,7 @@ export default function HeroSection() {
 
               {/* Description */}
               <p 
-                className="text-lg md:text-xl text-[#ffffffcc] max-w-2xl"
+                className="text-base sm:text-lg md:text-xl text-[#ffffffcc] max-w-2xl"
                 style={{ 
                   animation: 'fadeIn 0.6s ease-out 0.2s forwards'
                 }}
@@ -81,23 +81,23 @@ export default function HeroSection() {
 
               {/* CTA Buttons and Social Proof */}
               <div 
-                className="flex flex-col lg:flex-row items-start gap-8"
+                className="flex flex-col lg:flex-row items-start gap-6 sm:gap-8"
                 style={{ 
                   animation: 'fadeIn 0.6s ease-out 0.3s forwards'
                 }}
               >
                 {/* Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className='bg-[#dbea39] text-black hover:bg-[#dbea39]/90 cursor-pointer'>
+                <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                  <Button size="lg" className='bg-[#dbea39] text-black hover:bg-[#dbea39]/90 cursor-pointer w-full sm:w-auto'>
                     Subscribe now
                   </Button>
-                  <Button variant="hero-outline" size="lg">
+                  <Button variant="hero-outline" size="lg" className="w-full sm:w-auto">
                     Our services
                   </Button>
                 </div>
 
                 {/* Social Proof */}
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 w-full sm:w-auto">
                   <div className="flex flex-col text-sm text-[#ffffffcc]">
                     <span className="">Loved by founders</span>
                     <span className="">worldwide</span>

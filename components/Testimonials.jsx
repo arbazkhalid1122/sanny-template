@@ -47,7 +47,7 @@ export default function Testimonials() {
   }, [testimonials.length])
 
   return (
-    <section className="py-20 px-6">
+    <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -55,8 +55,8 @@ export default function Testimonials() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Testimonials</h2>
-          <p className="text-gray-400 text-lg mb-14 max-w-lg">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Testimonials</h2>
+          <p className="text-gray-400 text-base sm:text-lg mb-10 sm:mb-14 max-w-lg">
 Our services are loved by founders around the all world. We are proud to work with emerging talents, innovative startups and companies.          </p>
           <div
             className="relative rounded-2xl min-w-3xl flex items-end"
@@ -64,7 +64,7 @@ Our services are loved by founders around the all world. We are proud to work wi
               backgroundImage: `url(${testimonials[currentTestimonial].backgroundImage})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
-              minHeight: "500px", // Increased height (was likely less before)
+              minHeight: "400px", // Adjusted for mobile
             }}
           >
             {/* Overlay gradient */}
@@ -75,28 +75,28 @@ Our services are loved by founders around the all world. We are proud to work wi
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6 }}
-              className="relative w-full h-full flex flex-col justify-between p-6 md:p-10"
+              className="relative w-full h-full flex flex-col justify-between p-4 sm:p-6 md:p-10"
             >
               {/* Chat bubbles */}
-              <div className="space-y-4 w-full">
+              <div className="space-y-3 sm:space-y-4 w-full">
                 {/* Left-aligned testimonial */}
                 <div className="flex justify-end">
-                  <div className="bg-gray-900/80 text-white rounded-xl p-4 text-base md:text-lg leading-relaxed w-[300px]">
-                    <span className="block text-sm mb-1 text-white/80">{testimonials[currentTestimonial].name}</span>
+                  <div className="bg-gray-900/80 text-white rounded-xl p-3 sm:p-4 text-sm sm:text-base md:text-lg leading-relaxed w-[250px] sm:w-[300px]">
+                    <span className="block text-xs sm:text-sm mb-1 text-white/80">{testimonials[currentTestimonial].name}</span>
                     {testimonials[currentTestimonial].content}
                   </div>
                 </div>
 
                 <div className="flex justify-end">
-                  <div className="bg-white/50 text-white rounded-xl p-4 text-base md:text-lg leading-relaxed w-[300px]">
-                    <span className="block text-sm mb-1 text-white/80">{testimonials[currentTestimonial].replyName}</span>
+                  <div className="bg-white/50 text-white rounded-xl p-3 sm:p-4 text-sm sm:text-base md:text-lg leading-relaxed w-[250px] sm:w-[300px]">
+                    <span className="block text-xs sm:text-sm mb-1 text-white/80">{testimonials[currentTestimonial].replyName}</span>
                     {testimonials[currentTestimonial].reply}
                   </div>
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4">
-                <Avatar className="w-12 h-12 border-2 border-white">
+              <div className="flex items-center space-x-3 sm:space-x-4">
+                <Avatar className="w-10 h-10 sm:w-12 sm:h-12 border-2 border-white">
                   <AvatarImage src={testimonials[currentTestimonial].avatar} />
                   <AvatarFallback>
                     {testimonials[currentTestimonial].name
@@ -106,8 +106,8 @@ Our services are loved by founders around the all world. We are proud to work wi
                   </AvatarFallback>
                 </Avatar>
                 <div>
-                  <div className="font-semibold text-white">{testimonials[currentTestimonial].name}</div>
-                  <div className="text-gray-300 text-sm">{testimonials[currentTestimonial].role}</div>
+                  <div className="font-semibold text-white text-sm sm:text-base">{testimonials[currentTestimonial].name}</div>
+                  <div className="text-gray-300 text-xs sm:text-sm">{testimonials[currentTestimonial].role}</div>
                 </div>
               </div>
             </motion.div>

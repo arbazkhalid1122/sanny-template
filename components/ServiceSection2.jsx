@@ -44,7 +44,7 @@ export default function ServicesSection2() {
   ]
 
   return (
-    <section id="services" className="py-20 px-6 relative overflow-hidden">
+    <section id="services" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 relative overflow-hidden">
       {/* Background floating icons */}
       <div className="absolute inset-0 pointer-events-none z-0">
         {icons.map((icon, i) => (
@@ -52,7 +52,7 @@ export default function ServicesSection2() {
             key={i}
             animate={{ y: direction === 1 ? -30 : 30 }}
             transition={{ type: "spring", stiffness: 60, damping: 20 }}
-            className={`absolute w-16 h-16 bg-gradient-to-br ${icon.bg} rounded-2xl flex items-center justify-center text-3xl shadow-lg`}
+            className={`absolute w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br ${icon.bg} rounded-2xl flex items-center justify-center text-2xl sm:text-3xl shadow-lg`}
             style={positions[i % positions.length]}
           >
             {icon.symbol}
@@ -67,7 +67,7 @@ export default function ServicesSection2() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold mb-16"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-12 sm:mb-16"
         >
           Services
         </motion.h2>
@@ -77,12 +77,12 @@ export default function ServicesSection2() {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="grid md:grid-cols-3 gap-12"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12"
         >
-          {["Business process automation", "Integrate AI into your company’s data", "AI-powered apps development"].map((service, index) => (
+          {["Business process automation", "Integrate AI into your company's data", "AI-powered apps development"].map((service, index) => (
             <motion.div key={index} variants={scaleIn}>
-              <div className="space-y-6">
-                <h3 className="text-xl font-bold mb-4 text-white">{service}</h3>
+              <div className="space-y-4 sm:space-y-6">
+                <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-white">{service}</h3>
                 <p className="text-gray-400 leading-relaxed text-sm">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 </p>

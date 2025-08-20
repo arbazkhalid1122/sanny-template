@@ -14,18 +14,18 @@ export default function TeamSection() {
   ]
 
   return (
-    <section id="team" className="py-20 px-6">
+    <section id="team" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
       <div className="max-w-5xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-bold mb-6"
+          className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6"
         >
           Team
         </motion.h2>
-        <p className="text-gray-400 text-lg mb-14 max-w-lg">
+        <p className="text-gray-400 text-base sm:text-lg mb-10 sm:mb-14 max-w-lg">
 Each member of our team has a strong tech knowledge, with our principal focus on the triumph of our customers' businesses
         </p>
         <motion.div
@@ -33,7 +33,7 @@ Each member of our team has a strong tech knowledge, with our principal focus on
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1 space-y-10"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-1 space-y-6 sm:space-y-8 md:space-y-10"
         >
           {teamMembers.map((member, index) => (
             <motion.div
@@ -42,15 +42,15 @@ Each member of our team has a strong tech knowledge, with our principal focus on
               whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
               className="text-center"
             >
-              <div className="relative mb-4 overflow-hidden rounded-2xl">
+              <div className="relative mb-3 sm:mb-4 overflow-hidden rounded-2xl">
                 <img
                   src={member.image || "/placeholder.svg"}
                   alt={member.name}
                   className="w-full aspect-square object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <h3 className="text-lg font-bold text-white hover:text-yellow-400 transition-colors">{member.name}</h3>
-              <p className="text-gray-400">{member.role}</p>
+              <h3 className="text-base sm:text-lg font-bold text-white hover:text-yellow-400 transition-colors">{member.name}</h3>
+              <p className="text-gray-400 text-sm sm:text-base">{member.role}</p>
             </motion.div>
           ))}
         </motion.div>

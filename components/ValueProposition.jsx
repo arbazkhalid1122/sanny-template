@@ -44,7 +44,7 @@ const AnimatedText = ({ text, className = "" }) => {
 
 export default function ValueProposition() {
   return (
-    <section className="py-20 px-6">
+    <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -52,7 +52,7 @@ export default function ValueProposition() {
           transition={{ duration: 0.8 }}
           viewport={{ once: false }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8 max-w-3xl">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6 sm:mb-8 max-w-3xl">
             <AnimatedText text="Enhance your workflows to maximize performance and take effective control of your time. Focus on what truly matters to your business, while routine tasks run on autopilot with the help of our no-code and code-based solutions." />
           </h2>
         </motion.div>
