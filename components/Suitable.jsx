@@ -4,30 +4,34 @@ import { motion, useInView } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { FaRobot, FaBuilding, FaChartLine } from "react-icons/fa";
 import { useRef } from "react";
+import { MorphingCircles } from "./MorphingCircles";
+import { MorphingFlower } from "./MorphingFlower";
+import { OverlappingCircles } from "./OverlappingCircles";
 
 const cards = [
   {
     title: "Small business",
-    icon: <FaBuilding className="w-20 h-20 sm:w-32 sm:h-32 md:w-40 md:h-40 text-black" />,
+    icon: <MorphingCircles />,
     subtitle: "AI automation",
     description:
-      "Looking to streamline operations and enhance customer engagement? Our tailored AI solutions can help you optimize processes, improve decision-making, and drive growth.",
+      "Looking to streamline operations and enhance customer engagement? Our tailored AI solutions can help you optimize processes, improve decision-making, and drive growth. Let us empower your small business to compete more effectively in today’s market.",
   },
   {
     title: "Active Products",
-    icon: <FaChartLine className="w-20 h-20 sm:w-32 sm:h-32 md:w-40 md:h-40 text-black" />,
+    icon: <MorphingFlower/>,
     subtitle: "Add AI features",
     description:
-      "Already have an impressive, cutting-edge product? Let's take it further. We'll add powerful AI features to automate tasks, improve user engagement, and boost overall efficiency.",
+      "Already have an impressive, cutting-edge product? Let’s take it further. We’ll add powerful AI features to automate tasks, improve user engagement, and boost overall efficiency, making your business more effective.",
   },
   {
     title: "Startups",
-    icon: <FaRobot className="w-20 h-20 sm:w-32 sm:h-32 md:w-40 md:h-40 text-black" />,
+    icon: <OverlappingCircles/>,
     subtitle: "AI product from scratch",
     description:
-      "Got a revolutionary AI idea? With our expertise in helping startups, we'll turn your concept into a scalable MVP ready for future success.",
+      "Got a revolutionary AI idea? With our expertise in helping startups, we’ll turn your concept into a scalable MVP ready for future success. Together, we’ll strike the perfect balance between innovation and productivity.",
   },
 ];
+
 
 export default function SuitableSection() {
     const ref = useRef(null);
@@ -61,13 +65,14 @@ return (
                         viewport={{ once: false, amount: 0.4 }}
                         className="w-full md:w-auto"
                     >
-                        <Card className="rounded-2xl shadow-lg bg-white text-black">
+                        <Card className={`rounded-2xl shadow-lg ${i===1 ? 'bg-[#dbea39] text-black': i===2 ? 'bg-[#18191b] text-white' :'bg-white text-black'} border-0`}>
                             <CardContent className="p-6 sm:p-8 space-y-4 sm:space-y-6">
-                                <h3 className="text-lg sm:text-xl font-semibold">{card.title}</h3>
-                                <div className="flex justify-center">{card.icon}</div>
+                                <h3 className="text-lg sm:text-3xl font-semibold">{card.title}</h3>
+                                {card.icon}
+                                
                                 <div>
-                                    <h4 className="font-bold text-sm sm:text-base">{card.subtitle}</h4>
-                                    <p className="text-gray-600 text-sm sm:text-base">{card.description}</p>
+                                    <h4 className="font-semibold text-sm sm:text-xl">{card.subtitle}</h4>
+                                    <p className=" text-sm sm:text-base leading-7">{card.description}</p>
                                 </div>
                             </CardContent>
                         </Card>

@@ -2,29 +2,31 @@
 
 import { Button } from "@/components/ui/button";
 import { ChevronUp, Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isAtTop, setIsAtTop] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsAtTop(window.scrollY < 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <nav 
-      className="fixed top-10 w-full z-50"
-      style={{ 
-        animation: 'fadeIn 0.6s ease-out 0s forwards'
-      }}
+      className={`fixed ${isAtTop ? 'top-10' : 'top-0'} w-full z-500`}
+      style={{ animation: 'fadeIn 0.6s ease-out 0s forwards' }}
     >
-      
       <div className="max-w-5xl mx-auto py-6 px-4 sm:px-2">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div 
-            className="flex items-center space-x-2 rounded-full px-4 py-2.5 border"
-            style={{ 
-              background: '#343637',
-              backdropFilter: 'blur(20px)',
-              borderColor: 'hsl(0 0% 100% / 0.1)'
-            }}
+            className="flex items-center space-x-2 rounded-full px-4 py-2.5 border 
+                       bg-white/10 backdrop-blur-lg border-white/10"
           >
             <span className="text-white font-bold text-lg">Sanny</span>
             <span className="text-zinc-400">®</span>
@@ -33,27 +35,23 @@ export default function Navigation() {
 
           {/* Desktop Navigation Links */}
           <div 
-            className="hidden md:flex items-center rounded-full pl-6 border"
-            style={{ 
-              background: '#343637',
-              backdropFilter: 'blur(20px)',
-              borderColor: 'hsl(0 0% 100% / 0.1)'
-            }}
+            className="hidden md:flex items-center rounded-full pl-6 border 
+                       bg-white/10 backdrop-blur-lg border-white/10"
           >
             <div className="flex items-center space-x-4 mr-6 p-3">
-              <a href="#services" className=" transition-colors text-lg font-medium">
+              <a href="#services" className="text-white transition-colors text-lg font-medium">
                 Services
               </a>
-              <a href="#pricing" className=" transition-colors text-lg font-medium">
+              <a href="#pricing" className="text-white transition-colors text-lg font-medium">
                 Pricing
               </a>
-              <a href="#case-studies" className=" transition-colors text-lg font-medium">
+              <a href="#case-studies" className="text-white transition-colors text-lg font-medium">
                 Case studies
               </a>
-              <a href="#team" className=" transition-colors text-lg font-medium">
+              <a href="#team" className="text-white transition-colors text-lg font-medium">
                 Team
               </a>
-              <a href="#faq" className=" transition-colors text-lg font-medium">
+              <a href="#faq" className="text-white transition-colors text-lg font-medium">
                 FAQ
               </a>
             </div>
@@ -64,12 +62,8 @@ export default function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden flex items-center justify-center w-12 h-12 rounded-full border"
-            style={{ 
-              background: '#343637',
-              backdropFilter: 'blur(20px)',
-              borderColor: 'hsl(0 0% 100% / 0.1)'
-            }}
+            className="md:hidden flex items-center justify-center w-12 h-12 rounded-full 
+                       border bg-white/10 backdrop-blur-lg border-white/10"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
@@ -83,12 +77,8 @@ export default function Navigation() {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div 
-            className="md:hidden mt-4 rounded-2xl border p-6"
-            style={{ 
-              background: '#343637',
-              backdropFilter: 'blur(20px)',
-              borderColor: 'hsl(0 0% 100% / 0.1)'
-            }}
+            className="md:hidden mt-4 rounded-2xl border p-6 
+                       bg-white/10 backdrop-blur-lg border-white/10"
           >
             <div className="flex flex-col space-y-4">
               <a 

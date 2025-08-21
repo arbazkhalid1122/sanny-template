@@ -161,7 +161,7 @@ body {
   cursor: none;
 } */
 
-body::before {
+/* body::before {
   content: "";
   position: fixed;
   top: 0;
@@ -174,7 +174,7 @@ body::before {
   z-index: 9999;
   mix-blend-mode: difference;
   transition: transform 0.1s ease;
-}
+} */
 
 /* Added hover effects for interactive elements */
 /* button:hover,

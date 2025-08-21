@@ -14,6 +14,7 @@ import FAQSection from "@/components/FAQSection"
 import Footer from "@/components/Footer"
 import SuitableSection from "@/components/Suitable"
 import FeatureSection from "@/components/FeatureSection"
+import { MorphingCircles } from "@/components/MorphingCircles"
 
 export default function SannyLandingPage() {
   return (

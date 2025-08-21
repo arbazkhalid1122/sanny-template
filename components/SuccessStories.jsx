@@ -54,7 +54,7 @@ export default function SuccessStories() {
           Success Stories
         </motion.h2>
         <p className="text-gray-400 text-base sm:text-lg mb-10 sm:mb-14 max-w-lg">
-Some of our Best success stories. We invest a lot of resources and effort in our clients' projects because we want them to succeed.
+          Some of our Best success stories. We invest a lot of resources and effort in our clients' projects because we want them to succeed.
         </p>
         <motion.div
           variants={staggerContainer}
@@ -65,38 +65,39 @@ Some of our Best success stories. We invest a lot of resources and effort in our
         >
           {stories.map((story, index) => (
             <motion.div key={index} variants={fadeInUp}>
-             <Card className="bg-[#18191B] border-gray-800 overflow-hidden rounded-4xl flex h-full p-0 flex-col sm:flex-row">
-  {/* Text */}
-  <div className="w-full sm:w-1/2 flex flex-col justify-between p-4 sm:p-6">
-    <div className="p-2 sm:p-4">
-      <h3 className="text-base sm:text-lg font-semibold text-white mb-2">
-        {story.title}
-      </h3>
-      <p className="text-gray-400 text-xs sm:text-sm mb-4 sm:mb-6">
-        {story.description}
-      </p>
-    </div>
-    <div className="p-4 sm:p-6 flex flex-col items-start border-t border-gray-700">
-      <div className="text-xl sm:text-2xl font-semi-bold text-white mb-1">
-        {story.percentage}
-      </div>
-      <p className="text-gray-400 text-xs sm:text-sm">{story.metric}</p>
-    </div>
-  </div>
+              <Card className="bg-[#18191B] border-gray-800 overflow-hidden rounded-4xl flex h-full p-0 flex-col sm:flex-row">
+                {/* Text */}
+                <div className="w-full sm:w-1/2 flex flex-col justify-between p-4 sm:p-6">
+                  <div className="p-2 sm:p-4">
+                    <h3 className="text-base sm:text-lg font-semibold text-white mb-2">
+                      {story.title}
+                    </h3>
+                    <p className="text-gray-400 text-xs sm:text-sm mb-4 sm:mb-6">
+                      {story.description}
+                    </p>
+                  </div>
+                  <div className="p-4 sm:p-6 flex flex-col items-start border-t border-gray-700">
+                    <div className="text-xl sm:text-2xl font-semi-bold text-white mb-1">
+                      {story.percentage}
+                    </div>
+                    <p className="text-gray-400 text-xs sm:text-sm">{story.metric}</p>
+                  </div>
+                </div>
 
-  {/* Image */}
-  <div className="w-full sm:w-1/2 h-48 sm:h-full">
-    <img
-      src={story.image}
-      alt={story.alt}
-      className="w-full h-full object-cover"
-    />
-  </div>
-</Card>
+                {/* Image */}
+                <div className="w-full sm:w-1/2 h-48 sm:h-full">
+                  <img
+                    src={story.image}
+                    alt={story.alt}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </Card>
 
             </motion.div>
           ))}
         </motion.div>
+        <div className="text-center mt-14 text-lg text-gray-300 flex gap-2 item-center justify-center">...and more than <div className="border-2 w-[fit-content] rounded-full pl-2 pr-3 text-gray-300 border-gray-300">100+</div>completed projects</div>
       </div>
     </section>
   )
