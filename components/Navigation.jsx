@@ -14,7 +14,8 @@ export default function Navigation() {
         animation: 'fadeIn 0.6s ease-out 0s forwards'
       }}
     >
-      <div className="max-w-5xl mx-auto py-6 px-4 sm:px-6">
+      
+      <div className="max-w-5xl mx-auto py-6 px-4 sm:px-2">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div 

@@ -14,6 +14,7 @@ export default function CustomCursor() {
     return () => window.removeEventListener("mousemove", updatePosition)
   }, [])
 
+  
   return (
     <div
       className="fixed w-5 h-5 bg-white/80 rounded-full pointer-events-none z-[9999] mix-blend-difference transition-transform duration-100 ease-out"

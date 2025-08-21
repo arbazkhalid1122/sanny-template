@@ -66,6 +66,7 @@ export default function FAQSection() {
           </Accordion>
         </motion.div>
       </div>
+
     </section>
   )
 }

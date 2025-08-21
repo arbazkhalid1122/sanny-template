@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 
 import { fadeInUp, staggerContainer, scaleIn } from "@/lib/animations"
+import { Starburst } from "./StartBust"
 
 export default function HowItWorks() {
   const steps = [
@@ -34,7 +35,6 @@ export default function HowItWorks() {
       description:
         "Our results drive your business growth, which is our main goal. We offer detailed instructions, training, and tech support as long as you need to maximize our work's value.",
       bg: "bg-[#18191B] text-white",
-      icon: "✦",
     },
   ]
 
@@ -61,9 +61,10 @@ export default function HowItWorks() {
         >
           {steps.map((item, index) => (
             <motion.div key={index} variants={scaleIn}>
-              <Card className={`${item.bg} rounded-4xl border-0 h-full p-0`}>
-                <CardContent className="p-6 sm:p-8 md:p-10">
-                  <div className={`text-sm sm:text-md font-bold mb-24 sm:mb-28 md:mb-36 opacity-70 border-1 ${index === 0 ? 'border-black' : 'border-white'} w-[fit-content] rounded-2xl pl-1 pr-1`}>{item.step}</div>
+              <Card className={`${item.bg} rounded-4xl border-0 h-[fit-content] p-0 w-[fit-content]`}>
+                <CardContent className="p-6 sm:p-8 md:p-10 w-[fit-content]">
+                  <div className={`text-sm sm:text-lg pr-2 pl-2 font-bold ${index === 3 ? '' : 'mb-24 sm:mb-28 md:mb-36'} opacity-70 border-1 ${index === 0 ? 'border-black' : 'border-white'} w-[fit-content] rounded-2xl pl-1 pr-1`}>{item.step}</div>
+                  {index === 3 && <Starburst className="mx-auto my-10" />}
                   <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">{item.title}</h3>
                   <p className="leading-relaxed opacity-80 text-sm sm:text-base">{item.description}</p>
                   {item.icon && <div className="mt-4 sm:mt-6 text-3xl sm:text-4xl opacity-30">{item.icon}</div>}
