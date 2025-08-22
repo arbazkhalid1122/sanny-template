@@ -48,9 +48,9 @@ return (
                 }`}
                 style={{ zIndex: 10 }}
             >
-                <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">We are suitable for</h2>
+                <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">Why This Matters for You</h2>
                 <p className="text-gray-400 text-sm sm:text-base">
-                    Because we can solve the challenges that other companies can't reach
+                    Partnering with us on your GTM journey is a strategic decision that offers clear, tangible benefits
                 </p>
             </div>
 
