@@ -90,7 +90,7 @@ export default function HeroSection() {
                 {/* Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                   <Button size="lg" className='bg-[#dbea39] text-black hover:bg-[#dbea39]/90 cursor-pointer w-full sm:w-auto'>
-                    Subscribe now
+                    Book call
                   </Button>
                 </div>
               </div>

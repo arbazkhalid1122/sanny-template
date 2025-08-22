@@ -29,7 +29,7 @@ export default function Navigation() {
                        bg-white/10 backdrop-blur-lg border-white/10"
           >
             <span className="text-white font-bold text-lg">Fractional GTM</span>
-            <span className="text-zinc-400">®</span>
+            {/* <span className="text-zinc-400">®</span> */}
             <ChevronUp className="w-4 h-4 text-zinc-400" />
           </div>
 
@@ -53,7 +53,7 @@ export default function Navigation() {
               </a>
             </div>
             <Button className="bg-white text-black hover:bg-white/90 rounded-full px-6 py-2 h-12 text-lg font-semibold">
-              Buy now
+              Book 15-min call
             </Button>
           </div>
 
@@ -114,7 +114,7 @@ export default function Navigation() {
                 FAQ
               </a>
               <Button className="bg-white text-black hover:bg-white/90 rounded-full px-6 py-3 h-12 text-lg font-semibold mt-4">
-                Buy now
+                Book 15-min call
               </Button>
             </div>
           </div>

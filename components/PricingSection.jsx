@@ -39,7 +39,7 @@ export default function PricingSection() {
           viewport={{ once: true }}
           className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4"
         >
-          Pricing
+          Engagement Models
         </motion.h2>
 
         <motion.p
@@ -49,8 +49,7 @@ export default function PricingSection() {
           viewport={{ once: true }}
           className="text-gray-400 text-base sm:text-lg mb-10 sm:mb-14 max-w-lg"
         >
-          One monthly fee, no surprises. Simple pricing with no hidden costs, just ongoing AI automation support when
-          you need it.
+          We offer flexible engagement models designed to meet your specific needs. Even if you already have a growth and marketing team, our services can provide high-impact value by:
         </motion.p>
 
         <motion.div
@@ -58,27 +57,14 @@ export default function PricingSection() {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-1 w-full max-w-none"
+          className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-1 w-full max-w-none"
         >
           <motion.div variants={scaleIn}>
             <Card className="bg-[#18191B] border-gray-800 h-full w-full rounded-4xl">
               <CardContent className="p-6 sm:p-8">
-                <h3 className="text-base sm:text-lg font-medium mb-2 text-gray-300">Starter</h3>
-                <div className="text-4xl sm:text-5xl md:text-6xl font-bold mb-1 text-white">3,899 USD</div>
-                <div className="text-gray-300 text-sm mb-6 sm:mb-8 mt-2">per month</div>
-
-                <Button className="w-full sm:w-[fit-content] bg-white text-black mb-6 sm:mb-8 rounded-lg text-sm sm:text-md font-bold p-6 sm:p-8 mt-4 sm:mt-6">
-                  Get started
-                </Button>
-
-                <ul className="space-y-3 border-t pt-6 border-gray-700">
-                  {starterFeatures.map((feature, index) => (
-                    <li key={index} className="flex items-start space-x-3">
-                      <div className="w-2 h-2 border border-gray-400 rounded-full mt-2 flex-shrink-0" />
-                      <span className="text-gray-300 text-sm sm:text-lg">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="text-4xl sm:text-5xl md:text-4xl font-bold mb-40 text-white">Foundational Sprint</div>
+              
+                <p>A 2-4 month intensive engagement focused on building and implementing a core GTM playbook. This is ideal for pre-seed and seed-stage startups.</p>
               </CardContent>
             </Card>
           </motion.div>
@@ -86,22 +72,17 @@ export default function PricingSection() {
           <motion.div variants={scaleIn}>
             <Card className="bg-white border-gray-800 h-full w-full rounded-4xl">
               <CardContent className="p-6 sm:p-8">
-                <h3 className="text-base sm:text-lg font-medium mb-2 text-[#050607]">Master</h3>
-                <div className="text-4xl sm:text-5xl md:text-6xl font-bold mb-1 text-black">3,899 USD</div>
-                <div className="text-[#050607] text-sm mb-6 sm:mb-8 mt-2">per month</div>
+                <div className="text-4xl sm:text-5xl md:text-4xl font-bold mb-40 text-black">Strategic Advisory</div>
+                <p className="text-black"> An ongoing, retainer-based model where we act as a strategic sounding board and provide on-demand support for your growth and marketing team.</p>
+              </CardContent>
+            </Card>
+          </motion.div>
 
-                <Button className="w-full sm:w-[fit-content] bg-[#dbea39] text-black mb-6 sm:mb-8 rounded-lg text-sm sm:text-md font-bold p-6 sm:p-8 mt-4 sm:mt-6">
-                  Get started
-                </Button>
-
-                <ul className="space-y-3 border-t pt-6 border-gray-700">
-                  {masterFeatures.map((feature, index) => (
-                    <li key={index} className="flex items-start space-x-3">
-                      <div className="w-2 h-2 border border-gray-400 rounded-full mt-2 flex-shrink-0" />
-                      <span className="text-[#050607] text-sm sm:text-lg">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+            <motion.div variants={scaleIn}>
+            <Card className="bg-[#18191B] border-gray-800 h-full w-full rounded-4xl">
+              <CardContent className="p-6 sm:p-8">
+                <div className="text-4xl sm:text-5xl md:text-4xl font-bold mb-50 text-white">Project-Based</div>
+                <p className=""> For specific, high-priority initiatives, such as a new product launch, a new market entry, or a full GTM audit.</p>
               </CardContent>
             </Card>
           </motion.div>
@@ -109,7 +90,7 @@ export default function PricingSection() {
         </motion.div>
 
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -133,7 +114,7 @@ export default function PricingSection() {
               </div>
             </CardContent>
           </Card>
-        </motion.div>
+        </motion.div> */}
 
 
       </div>

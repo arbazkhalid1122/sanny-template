@@ -2,84 +2,122 @@
 
 import { motion, useInView } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { FaRobot, FaBuilding, FaChartLine } from "react-icons/fa";
 import { useRef } from "react";
 import { MorphingCircles } from "./MorphingCircles";
 import { MorphingFlower } from "./MorphingFlower";
 import { OverlappingCircles } from "./OverlappingCircles";
+import { FaRobot, FaShieldAlt } from "react-icons/fa";
 
 const cards = [
   {
-    title: "Small business",
+    title: "Accelerated Time-to-Market",
     icon: <MorphingCircles />,
     subtitle: "AI automation",
     description:
-      "Looking to streamline operations and enhance customer engagement? Our tailored AI solutions can help you optimize processes, improve decision-making, and drive growth. Let us empower your small business to compete more effectively in today’s market.",
+      "Get to your target market faster and more effectively by building the right systems from day one.",
   },
   {
-    title: "Active Products",
-    icon: <MorphingFlower/>,
+    title: "De-Risked Growth",
+    icon: <MorphingFlower />,
     subtitle: "Add AI features",
     description:
-      "Already have an impressive, cutting-edge product? Let’s take it further. We’ll add powerful AI features to automate tasks, improve user engagement, and boost overall efficiency, making your business more effective.",
+      "Reduce the risk of GTM failure by building a proven, data-informed strategy",
   },
   {
-    title: "Startups",
-    icon: <OverlappingCircles/>,
+    title: "Empowered Team",
+    icon: <OverlappingCircles />,
     subtitle: "AI product from scratch",
     description:
-      "Got a revolutionary AI idea? With our expertise in helping startups, we’ll turn your concept into a scalable MVP ready for future success. Together, we’ll strike the perfect balance between innovation and productivity.",
+      "Your founding team and any early hires will be equipped with the knowledge and tools they need to drive growth long after our engagement is complete.",
+    theme: "dark-neutral",
+  },
+  {
+    title: "Cost-Effective Expertise",
+    // icon: <FaRobot className="text-4xl" />,
+    subtitle: "Smart analytics",
+    description:
+      "Get access to senior-level GTM talent at a fraction of the cost of a full-time hire, allowing you to invest capital in other mission-critical areas.",
+    theme: "dark-blue",
+  },
+  {
+    title: "Enhanced Investor Confidence",
+    // icon: <FaShieldAlt className="text-4xl" />,
+    subtitle: "Scalable solutions",
+    description:
+      "Showcase to investors that you have a clear, executable GTM plan, increasing your chances of securing future funding.",
+    theme: "dark-gradient",
   },
 ];
 
-
 export default function SuitableSection() {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { margin: "-50px", amount: 0.3 })
+  const ref = useRef(null);
+  const isInView = useInView(ref, { margin: "-50px", amount: 0.3 });
   console.log("inView:", isInView);
-  
-return (
-    <section className="relative bg-black text-white py-12 sm:py-16 md:py-20 px-4 sm:px-6" ref={ref}>
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
-            {/* Left side - pinned */}
-            <div
-                className={`h-fit self-start pt-8 sm:pt-16 md:pt-32 w-full md:w-[250px] ${
-                    isInView ? "md:fixed md:top-30" : "static"
-                }`}
-                style={{ zIndex: 10 }}
-            >
-                <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">Why This Matters for You</h2>
-                <p className="text-gray-400 text-sm sm:text-base">
-                    Partnering with us on your GTM journey is a strategic decision that offers clear, tangible benefits
-                </p>
-            </div>
 
-            {/* Right side - cards in scroll flow */}
-            <div className="flex flex-col gap-4 sm:gap-6 md:gap-1 justify-end items-end w-full md:col-start-2">
-                {cards.map((card, i) => (
-                    <motion.div
-                        key={i}
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
-                        viewport={{ once: false, amount: 0.4 }}
-                        className="w-full md:w-auto"
-                    >
-                        <Card className={`rounded-2xl shadow-lg ${i===1 ? 'bg-[#dbea39] text-black': i===2 ? 'bg-[#18191b] text-white' :'bg-white text-black'} border-0`}>
-                            <CardContent className="p-6 sm:p-8 space-y-4 sm:space-y-6">
-                                <h3 className="text-lg sm:text-3xl font-semibold">{card.title}</h3>
-                                {card.icon}
-                                
-                                <div>
-                                    <h4 className="font-semibold text-sm sm:text-xl">{card.subtitle}</h4>
-                                    <p className=" text-sm sm:text-base leading-7">{card.description}</p>
-                                </div>
-                            </CardContent>
-                        </Card>
-                    </motion.div>
-                ))}
-            </div>
+  return (
+    <section
+      className="relative bg-black text-white py-12 sm:py-16 md:py-20 px-4 sm:px-6"
+      ref={ref}
+    >
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
+        {/* Left side - pinned */}
+        <div
+          className={`h-fit self-start pt-8 sm:pt-16 md:pt-32 w-full md:w-[250px] ${
+            isInView ? "md:fixed md:top-30" : "static"
+          }`}
+          style={{ zIndex: 10 }}
+        >
+          <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">
+            Why This Matters for You
+          </h2>
+          <p className="text-gray-400 text-sm sm:text-base">
+            Partnering with us on your GTM journey is a strategic decision that
+            offers clear, tangible benefits
+          </p>
         </div>
+
+        {/* Right side - cards in scroll flow */}
+        <div className="flex flex-col gap-4 sm:gap-6 md:gap-1 justify-end items-end w-full md:col-start-2">
+          {cards.map((card, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: false, amount: 0.4 }}
+              className="w-full md:w-auto"
+            >
+              <Card
+                className={`rounded-2xl shadow-lg border-0 
+                  ${
+                    i === 1
+                      ? "bg-[#dbea39] text-black" // yellow
+                      : card.theme === "dark-neutral"
+                      ? "bg-[#18191b] text-white" // matte black-gray
+                      : card.theme === "dark-blue"
+                      ? "bg-[#1e293b] text-white" // slate/blue-gray
+                      : card.theme === "dark-gradient"
+                      ? "bg-gradient-to-br from-[#0f172a] via-[#1e1e1e] to-[#2c2d31] text-white" // gradient
+                      : "bg-white text-black" // default white
+                  }`}
+              >
+                <CardContent className="p-6 sm:p-8 space-y-4 sm:space-y-6">
+                  <h3 className="text-lg sm:text-3xl font-semibold">
+                    {card.title}
+                  </h3>
+                  {card.icon}
+
+                  <div>
+                    <p className=" text-sm sm:text-base leading-7">
+                      {card.description}
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
+      </div>
     </section>
-);
+  );
 }
