@@ -5,6 +5,7 @@ import { ChevronDown } from "lucide-react";
 // import avatar2 from "@/assets/avatar-2.jpg";
 // import avatar3 from "@/assets/avatar-3.jpg";
 import { MdArrowDownward } from "react-icons/md";
+import TrustedBy from "./TrustedBy";
 
 export default function HeroSection() {
   return (
@@ -93,6 +94,7 @@ export default function HeroSection() {
                   </Button>
                 </div>
               </div>
+                    <TrustedBy />
             </div>
           </div>
         </div>

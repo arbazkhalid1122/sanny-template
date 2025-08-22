@@ -40,16 +40,13 @@ export default function Navigation() {
           >
             <div className="flex items-center space-x-4 mr-6 p-3">
               <a href="#services" className="text-white transition-colors text-lg font-medium">
-                Services
+                Solution
               </a>
               <a href="#pricing" className="text-white transition-colors text-lg font-medium">
-                Pricing
+                Why
               </a>
               <a href="#case-studies" className="text-white transition-colors text-lg font-medium">
-                Case studies
-              </a>
-              <a href="#team" className="text-white transition-colors text-lg font-medium">
-                Team
+                Pricing
               </a>
               <a href="#faq" className="text-white transition-colors text-lg font-medium">
                 FAQ

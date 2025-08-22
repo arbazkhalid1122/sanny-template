@@ -5,7 +5,7 @@ import { MdStarPurple500 } from "react-icons/md";
 
 export default function TrustedBy() {
   return (
-    <section className="py-8 pb-20 px-4 sm:px-6">
+    <section>
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0 }}
@@ -13,7 +13,7 @@ export default function TrustedBy() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <p className="text-gray-400 mb-6 text-sm">Trusted by high-performing companies</p>
+          <p className="text-gray-200 text-sm">Trusted by high-performing companies</p>
           <div className="flex flex-wrap items-center justify-start gap-3 sm:gap-4">
             <span className="text-lg sm:text-xl md:text-2xl font-bold text-white">Tarscase</span>
             <span className="text-lg sm:text-xl md:text-2xl font-bold italic opacity-80">Mine Work</span>

@@ -33,7 +33,9 @@ export function Starburst() {
       viewBox="0 0 400 400"
       xmlns="http://www.w3.org/2000/svg"
       animate={controls}
-      style={{ originX: "50%", originY: "50%" }}
+      style={{ originX: "50%", originY: "50%" ,
+        
+      }}
       className="mx-auto my-10"
     >
       <g stroke="white" strokeWidth="2">

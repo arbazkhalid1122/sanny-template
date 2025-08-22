@@ -15,14 +15,14 @@ import Footer from "@/components/Footer"
 import SuitableSection from "@/components/Suitable"
 import FeatureSection from "@/components/FeatureSection"
 import { MorphingCircles } from "@/components/MorphingCircles"
+import Problems from "@/components/Problems"
 
 export default function SannyLandingPage() {
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden cursor-custom">
       <Navigation />
       <HeroSection />
-      <ValueProposition />
-      <TrustedBy />
+      <Problems />
       <HowItWorks />
       <FeatureSection />
       <ServicesSection />
