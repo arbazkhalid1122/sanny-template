@@ -47,7 +47,7 @@ export default function PricingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
-          className="text-gray-400 text-base sm:text-lg mb-10 sm:mb-14 max-w-lg"
+          className="text-gray-400 text-base sm:text-lg mb-10 sm:mb-14 max-w-2xl"
         >
           We offer flexible engagement models designed to meet your specific needs. Even if you already have a growth and marketing team, our services can provide high-impact value by:
         </motion.p>

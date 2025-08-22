@@ -13,7 +13,7 @@ export default function Footer() {
 
         {/* Subtext */}
         <div className="text-start">
-          <p className="text-gray-300 mb-8 sm:mb-12 text-base sm:text-lg leading-relaxed max-w-[470px]">
+          <p className="text-gray-300 mb-8 sm:mb-12 text-base sm:text-lg leading-relaxed max-w-2xl">
             Contact us to learn more about{" "}
             <span className="font-medium">Fractional GTM Automation Agency</span> and
             figure out how your team can change the way they work with AI

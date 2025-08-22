@@ -25,7 +25,7 @@ export default function SannyLandingPage() {
       <Problems />
       <HowItWorks />
       <FeatureSection />
-      <ServicesSection />
+      {/* <ServicesSection /> */}
       <SuitableSection />
       <Testimonials />
       <PricingSection />

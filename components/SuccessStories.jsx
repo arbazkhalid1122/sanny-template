@@ -53,7 +53,7 @@ export default function SuccessStories() {
         >
           Success Stories
         </motion.h2>
-        <p className="text-gray-400 text-base sm:text-lg mb-10 sm:mb-14 max-w-lg">
+        <p className="text-gray-400 text-base sm:text-lg mb-10 sm:mb-14 max-w-2xl">
           Some of our Best success stories. We invest a lot of resources and effort in our clients' projects because we want them to succeed.
         </p>
         <motion.div
