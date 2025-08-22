@@ -6,29 +6,34 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 export default function FAQSection() {
   const faqs = [
     {
-      question: "How quickly can you implement AI solutions?",
+      question: 'What is a "Fractional GTM" expert?',
       answer:
-        "We typically deliver initial AI implementations within 2-4 weeks, depending on the complexity of your requirements. Our quick onboarding process ensures you see results fast.",
+        "A fractional expert is a seasoned professional who works with companies on a part-time, project, or retainer basis, providing high-level strategic guidance and execution without the cost of a full-time hire.",
     },
     {
-      question: "What types of businesses do you work with?",
+      question: "How long does an engagement typically last?",
       answer:
-        "We work with businesses of all sizes, from startups to enterprise companies. Our solutions are particularly effective for companies looking to automate repetitive tasks and improve operational efficiency.",
+        "Engagements are flexible, but a typical foundational build-out takes 2-4 months, followed by a transition and potential on-demand support.",
     },
     {
-      question: "Do you provide ongoing support?",
+      question: "What kind of companies are a good fit for this service?",
       answer:
-        "Yes, we provide comprehensive ongoing support including monitoring, maintenance, updates, and optimization of your AI systems to ensure continued performance.",
+        "Early-stage (pre-seed, seed) B2B or B2C startups with a working product and a clear need to define their market and growth strategy.",
     },
     {
-      question: "What's included in the pricing?",
+      question: "How do you measure success?",
       answer:
-        "Our pricing includes consultation, implementation, testing, training, and initial support. The Master plan includes additional features like unlimited revisions and dedicated account management.",
+        "Success is measured by key outcomes, including a clear and documented GTM strategy, established acquisition channels, repeatable sales processes, and a confident founding team with a strong understanding of their market.",
     },
     {
-      question: "Can you integrate with our existing systems?",
+      question: "What's the difference between this and a regular marketing consultant?",
       answer:
-        "Absolutely. We specialize in seamless integration with existing business systems, ensuring minimal disruption to your current workflows while maximizing the benefits of AI automation.",
+        "A consultant provides recommendations. We provide hands-on, embedded support to build and implement the systems and processes, ensuring knowledge transfer and long-term sustainability.",
+    },
+    {
+      question: "What kind of expertise does your team have?",
+      answer:
+        "Our team comprises individuals with extensive experience within growth, and marketing functionalities, especially in the African tech ecosystem, with a proven track record of building and scaling GTM functions from the ground up.",
     },
   ]
 
@@ -45,7 +50,7 @@ export default function FAQSection() {
           FAQ
         </motion.h2>
         <p className="text-gray-400 text-base sm:text-lg mb-10 sm:mb-14 max-w-lg">
-          Do you have more questions? We have prepared some answers for you. But if you need more, just <span className="underline">Book a call</span> or mail us <span className="underline">hey@sanny.ai</span>
+          Fractional GTM service for Early-Stage Startups
         </p>
 
         <motion.div
@@ -66,7 +71,6 @@ export default function FAQSection() {
           </Accordion>
         </motion.div>
       </div>
-
     </section>
   )
 }

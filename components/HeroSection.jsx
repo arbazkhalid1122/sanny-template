@@ -43,7 +43,7 @@ export default function HeroSection() {
                     WebkitTextFillColor: 'transparent'
                   }}
                 >
-                  AI Services
+                  Fractional GTM service
                 </span>
                 <span 
                   className="block"
@@ -54,7 +54,7 @@ export default function HeroSection() {
                     WebkitTextFillColor: 'transparent'
                   }}
                 >
-                  for your Business
+                  for Early-Stage
                 </span>
                 <span 
                   className="block"
@@ -65,7 +65,7 @@ export default function HeroSection() {
                     WebkitTextFillColor: 'transparent'
                   }}
                 >
-                  Growth
+                  Startups
                 </span>
               </h1>
 
@@ -76,7 +76,7 @@ export default function HeroSection() {
                   animation: 'fadeIn 0.6s ease-out 0.2s forwards'
                 }}
               >
-                We'll pump your company with AI. As a leading AI automation agency with 39 years of experience, we deliver top results.
+                We offer a result driven embedded GTM service that provides you with high-impact expertise without the long-term financial commitment of a full-time hire.
               </p>
 
               {/* CTA Buttons and Social Proof */}
@@ -91,36 +91,6 @@ export default function HeroSection() {
                   <Button size="lg" className='bg-[#dbea39] text-black hover:bg-[#dbea39]/90 cursor-pointer w-full sm:w-auto'>
                     Subscribe now
                   </Button>
-                  <Button variant="hero-outline" size="lg" className="w-full sm:w-auto">
-                    Our services
-                  </Button>
-                </div>
-
-                {/* Social Proof */}
-                <div className="flex items-center gap-4 w-full sm:w-auto">
-                  <div className="flex flex-col text-sm text-[#ffffffcc]">
-                    <span className="">Loved by founders</span>
-                    <span className="">worldwide</span>
-                  </div>
-                  <div className="flex -space-x-2">
-                    <Avatar className="w-8 h-8 border-zinc-900 z-10">
-                      <AvatarImage src="https://framerusercontent.com/images/TaqY8Xv55oL11NawZDD2ZWT0PQ.jpg" alt="Founder 1" />
-                      <AvatarFallback className="bg-lime-400 text-zinc-900">F1</AvatarFallback>
-                    </Avatar>
-                    <Avatar className="w-8 h-8 border-zinc-900 z-9">
-                      <AvatarImage src="https://framerusercontent.com/images/v4sk80ioxCwonE6GI6DEo9CMH4.jpg" alt="Founder 2" />
-                      <AvatarFallback className="bg-lime-400 text-zinc-900">F2</AvatarFallback>
-                    </Avatar>
-                    <Avatar className="w-8 h-8 border-zinc-900 z-8">
-                      <AvatarImage src="https://framerusercontent.com/images/rpQllM97VuwSi50MereUoX8ZA.jpg" alt="Founder 3" />
-                      <AvatarFallback className="bg-lime-400 text-zinc-900">F3</AvatarFallback>
-                    </Avatar>
-                    <Avatar className="w-8 h-8 border-zinc-900 z-7">
-                      <AvatarImage src="https://framerusercontent.com/images/vB3bbUG9dVlFFmQiBgN0z2YhDjA.jpg" alt="Founder 4" />
-                      <AvatarFallback className="bg-lime-400 text-zinc-900">F4</AvatarFallback>
-                    </Avatar>
-                  </div>
-                  <MdArrowDownward className="w-8 h-8 p-1 text-[#ffffff] bg-[#8a8f92] rounded-full"/>
                 </div>
               </div>
             </div>

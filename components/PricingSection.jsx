@@ -128,7 +128,7 @@ export default function PricingSection() {
                   Book call
                 </Button>
                 <p className="text-gray-300 text-sm sm:text-lg">
-                  or mail us at <span className="text-gray-300 underline">hey@sanny.ai</span>
+                  or mail us at <span className="text-gray-300 underline">hey@fractionalgtm</span>
                 </p>
               </div>
             </CardContent>

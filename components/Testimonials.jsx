@@ -9,20 +9,20 @@ export default function Testimonials() {
   const testimonials = [
     {
       name: "Vincent Kapoor",
-      role: "Founder of La Boulangerie",
+      role: "CEO of Kinder Bench",
       content:
-        "According to our observations, the bakery started saving about 33 working days per quarter.",
-      reply: "Good to hear. Great result.",
-      replyName: "Sanny AI",
+        "The Sanny team has changed our internal productivity for the better. We use automation for everything from childcare to ordering food for lunches.",
+      reply: "It was a pleasure to help 🫡.",
+      replyName: "Fractional GTM",
       avatar: "https://framerusercontent.com/images/TaqY8Xv55oL11NawZDD2ZWT0PQ.jpg",
       backgroundImage: "https://framerusercontent.com/images/SCTm5DcMFWv510sxMAG4sbisRAY.jpg?scale-down-to=1024",
     },
     {
       name: "Bruce Ng",
       role: "Co-founder and CEO of SPICE AI",
-      replyName: "Sanny AI",
+      replyName: "Fractional GTM",
       content:
-        "We came to Sanny AI agency with just an idea on a piece of paper.",
+        "We came to Fractional GTM agency with just an idea on a piece of paper.",
       reply: "Amazing progress! Keep it up.",
       avatar: "https://framerusercontent.com/images/v4sk80ioxCwonE6GI6DEo9CMH4.jpg",
       backgroundImage: "https://framerusercontent.com/images/zx8SH6CouNCKAphe45IT6cPgc.jpg?scale-down-to=1024",
@@ -30,9 +30,9 @@ export default function Testimonials() {
     {
       name: "Bruce Ng",
       role: "Co-founder and CEO of SPICE AI",
-      replyName: "Sanny AI",
+      replyName: "Fractional GTM",
       content:
-        "We came to Sanny AI agency with just an idea on a piece of paper.",
+        "We came to Fractional GTM agency with just an idea on a piece of paper.",
       reply: "Amazing progress! Keep it up.",
       avatar: "https://framerusercontent.com/images/rpQllM97VuwSi50MereUoX8ZA.jpg",
       backgroundImage: "https://framerusercontent.com/images/RvmvxP2U7fqKYhLfiqIwUfUH5c.jpg?scale-down-to=1024",

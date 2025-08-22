@@ -11,7 +11,7 @@ const playwriteCA = Playwrite_CA({
 })
 
 export const metadata = {
-  title: "v0 App",
+  title: "Fractional GTM",
   description: "Created with v0",
   viewport: "width=device-width, initial-scale=1",
 }

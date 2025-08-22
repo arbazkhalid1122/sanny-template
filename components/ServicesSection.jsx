@@ -68,7 +68,7 @@ export default function ServicesSection() {
   return (
     <section id="services" className="relative overflow-hidden py-20 px-6 sm:px-8 md:px-12 lg:px-16 ">
       {/* Floating icons */}
-      <div className="absolute inset-0 pointer-events-none">
+      {/* <div className="absolute inset-0 pointer-events-none">
         {icons.map((icon, i) => (
           <motion.div
             key={i}
@@ -80,10 +80,10 @@ export default function ServicesSection() {
             <Image src={icon.src} alt="icon" width={60} height={60} className="object-contain z-200" />
           </motion.div>
         ))}
-      </div>
+      </div> */}
 
       {/* Content */}
-      <div className="max-w-5xl mx-auto relative z-10 mt-50">
+      <div className="max-w-5xl mx-auto relative z-10 ">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -127,7 +127,7 @@ export default function ServicesSection() {
         </motion.div>
       </div>
 
-  <div className="absolute inset-0 pointer-events-none">
+  {/* <div className="absolute inset-0 pointer-events-none">
         {icons1.map((icon, i) => (
           <motion.div
             key={i}
@@ -139,7 +139,7 @@ export default function ServicesSection() {
             <Image src={icon.src} alt="icon" width={60} height={60} className="object-contain z-200" />
           </motion.div>
         ))}
-      </div>
+      </div> */}
        <div className="max-w-5xl mx-auto relative z-10 mt-20 mb-50">
         <motion.div
           variants={staggerContainer}

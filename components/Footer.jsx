@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="text-start">
           <p className="text-gray-300 mb-8 sm:mb-12 text-base sm:text-lg leading-relaxed max-w-[470px]">
             Contact us to learn more about{" "}
-            <span className="font-medium">Sanny AI Automation Agency</span> and
+            <span className="font-medium">Fractional GTM Automation Agency</span> and
             figure out how your team can change the way they work with AI
           </p>
         </div>
@@ -32,17 +32,17 @@ export default function Footer() {
         <p className="text-gray-300 text-base sm:text-lg text-center">
           or mail us at{" "}
           <Link
-            href="mailto:hey@sanny.ai"
+            href="mailto:hey@fractionalgtm"
             className="underline hover:text-white inline-flex items-center gap-1"
           >
             <Mail size={14} />
-            hey@sanny.ai
+            hey@fractionalgtm
           </Link>
         </p>
 
         {/* Footer */}
         <div className="flex flex-col md:flex-row justify-between items-center text-sm sm:text-base text-white/60 pt-6 sm:pt-8 gap-4 border-b pb-6 sm:pb-8 border-gray-900">
-          <span>2025 © Sanny® AI Agency Inc.</span>
+          <span>2025 © Fractional GTM® AI Agency Inc.</span>
 
           <div className="flex items-center gap-3 sm:gap-4 flex-wrap justify-center">
             <Link href="#" className="hover:text-gray-500">
@@ -51,22 +51,11 @@ export default function Footer() {
             <Link href="#" className="hover:text-gray-500">
               Twitter
             </Link>
-            <span>|</span>
-            <Link href="#" className="hover:text-gray-500">
-              S1
-            </Link>
-            <Link href="#" className="hover:text-gray-500">
-              S2
-            </Link>
-            <Link href="#" className="hover:text-gray-500">
-              404
-            </Link>
-            <Link href="#" className="hover:text-gray-500">
-              Terms
+             <Link href="#" className="hover:text-gray-500">
+              Instagram
             </Link>
           </div>
         </div>
-          <div className="text-center pt-4 sm:pt-6 text-gray-500 text-sm sm:text-base">Powered by FRAMER Created by DEE S</div>
       </div>
     </div>
   );

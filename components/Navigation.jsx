@@ -28,7 +28,7 @@ export default function Navigation() {
             className="flex items-center space-x-2 rounded-full px-4 py-2.5 border 
                        bg-white/10 backdrop-blur-lg border-white/10"
           >
-            <span className="text-white font-bold text-lg">Sanny</span>
+            <span className="text-white font-bold text-lg">Fractional GTM</span>
             <span className="text-zinc-400">®</span>
             <ChevronUp className="w-4 h-4 text-zinc-400" />
           </div>
