@@ -15,7 +15,7 @@ export default function Testimonials() {
       content:
         "The Fractional team has changed our internal productivity for the better. We use automation for everything from childcare to ordering food for lunches.",
       avatar:
-        "https://framerusercontent.com/images/TaqY8Xv55oL11NawZDD2ZWT0PQ.jpg",
+        "https://images.pexels.com/photos/30004325/pexels-photo-30004325.jpeg",
     },
     {
       name: "Bruce Ng",
@@ -23,7 +23,7 @@ export default function Testimonials() {
       content:
         "We came to Fractional GTM agency with just an idea on a piece of paper. They helped us turn it into reality.",
       avatar:
-        "https://framerusercontent.com/images/v4sk80ioxCwonE6GI6DEo9CMH4.jpg",
+        "https://images.pexels.com/photos/11351731/pexels-photo-11351731.jpeg",
     },
     {
       name: "Sophie Tan",
@@ -31,7 +31,7 @@ export default function Testimonials() {
       content:
         "Their team gave us the tools and guidance to scale much faster. Couldn’t have done it without them!",
       avatar:
-        "https://framerusercontent.com/images/rpQllM97VuwSi50MereUoX8ZA.jpg",
+        "https://images.pexels.com/photos/2451600/pexels-photo-2451600.jpeg",
     },
   ]
 
