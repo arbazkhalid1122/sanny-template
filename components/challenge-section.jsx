@@ -27,7 +27,7 @@ const challenges = [
 
 export function ChallengeSection() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-16">
       {challenges.map((challenge, index) => (
         <motion.div
           key={challenge.title}
@@ -38,7 +38,7 @@ export function ChallengeSection() {
             delay: index * 0.1,
             ease: "easeOut",
           }}
-          className="space-y-4"
+          className="space-y-2"
         >
           <h3 className="text-foreground font-semibold text-2xl">{challenge.title}</h3>
           <p className="text-muted-foreground text-gray-400 text-xl leading-relaxed">{challenge.description}</p>
