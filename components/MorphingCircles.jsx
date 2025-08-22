@@ -5,27 +5,6 @@ import { useEffect, useRef } from "react"
 
 export function MorphingCircles() {
   const controls = useAnimation()
-  const scrollTimeout = useRef(null)
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     // animate circles into a blob
-  //     controls.start({
-  //       rx: [100, 140], // animate radius x (for ellipse-like effect)
-  //       ry: [100, 80],  // animate radius y
-  //       transition: { duration: 1.2, ease: "easeInOut" },
-  //     })
-
-  //     // reset after scroll stops
-  //     if (scrollTimeout.current) clearTimeout(scrollTimeout.current)
-  //     scrollTimeout.current = setTimeout(() => {
-  //       controls.set({ rx: 100, ry: 100 })
-  //     }, 200)
-  //   }
-
-  //   window.addEventListener("scroll", handleScroll)
-  //   return () => window.removeEventListener("scroll", handleScroll)
-  // }, [controls])
 
   return (
     <svg

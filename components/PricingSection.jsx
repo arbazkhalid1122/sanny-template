@@ -90,31 +90,6 @@ export default function PricingSection() {
         </motion.div>
 
 
-        {/* <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mt-4 sm:mt-6 md:mt-2 w-full"
-        >
-          <Card className="bg-[#18191B] border-gray-800 w-full rounded-4xl p-0">
-            <CardContent className="p-6 sm:p-8 md:p-12">
-              <h3 className="text-xl sm:text-2xl font-semibold mb-2 text-white">Custom offer</h3>
-              <p className="text-gray-300 text-base sm:text-lg mb-4 sm:mb-6">
-                Want fixed pricing? Tell us more about your project
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center mt-8 sm:mt-12">
-                <Button className="w-full sm:w-auto bg-white text-black hover:bg-gray-700 rounded-lg p-6 sm:p-7 text-base sm:text-lg font-semibold">
-                  Book call
-                </Button>
-                <p className="text-gray-300 text-sm sm:text-lg">
-                  or mail us at <span className="text-gray-300 underline">hey@fractionalgtm</span>
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-        </motion.div> */}
 
 
       </div>

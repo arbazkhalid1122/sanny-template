@@ -7,6 +7,7 @@ import { MorphingCircles } from "./MorphingCircles";
 import { MorphingFlower } from "./MorphingFlower";
 import { OverlappingCircles } from "./OverlappingCircles";
 import { FaRobot, FaShieldAlt } from "react-icons/fa";
+import { MorphingSquares, MorphingTriangles } from "./svg";
 
 const cards = [
   {
@@ -33,7 +34,7 @@ const cards = [
   },
   {
     title: "Cost-Effective Expertise",
-    // icon: <FaRobot className="text-4xl" />,
+    icon: <MorphingSquares  />,
     subtitle: "Smart analytics",
     description:
       "Get access to senior-level GTM talent at a fraction of the cost of a full-time hire, allowing you to invest capital in other mission-critical areas.",
@@ -41,7 +42,7 @@ const cards = [
   },
   {
     title: "Enhanced Investor Confidence",
-    // icon: <FaShieldAlt className="text-4xl" />,
+    icon: <MorphingTriangles />,
     subtitle: "Scalable solutions",
     description:
       "Showcase to investors that you have a clear, executable GTM plan, increasing your chances of securing future funding.",
