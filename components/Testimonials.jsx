@@ -35,12 +35,6 @@ export default function Testimonials() {
     },
   ]
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % testimonials.length)
-    }, 6000)
-    return () => clearInterval(timer)
-  }, [testimonials.length])
 
   const handlePrev = () =>
     setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length)
@@ -49,10 +43,10 @@ export default function Testimonials() {
 
   return (
     <section className="py-12 sm:py-20 px-4 sm:px-8 bg-black text-white">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         {/* Top Header */}
         <div className="flex justify-between items-center mb-10">
-          <h2 className="text-3xl md:text-4xl leading-snug max-w-md">
+          <h2 className="text-2xl sm:text-3xl md:text-3xl leading-snug max-w-md">
             Real Stories from the Frontlines
           </h2>
           <p className="text-gray-400 mt-3 max-w-md ">

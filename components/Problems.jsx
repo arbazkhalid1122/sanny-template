@@ -22,7 +22,7 @@ export default function Problems() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            className="flex items-center justify-center w-full lg:max-w-md mt-10"
+            className="flex items-center justify-center w-full lg:max-w-md"
           >
             <div className=" backdrop-blur-sm rounded-3xl p-16 w-full"
             style={{

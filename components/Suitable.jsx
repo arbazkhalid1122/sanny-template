@@ -68,7 +68,7 @@ export default function SuitableSection() {
           }`}
           style={{ zIndex: 10 }}
         >
-          <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-3xl mb-2">
             Why This Matters for You
           </h2>
           <p className="text-gray-400 text-sm sm:text-base">
@@ -103,7 +103,7 @@ export default function SuitableSection() {
                   }`}
               >
                 <CardContent className="p-6 sm:p-8 space-y-4 sm:space-y-6">
-                  <h3 className="text-lg sm:text-3xl font-semibold">
+                  <h3 className="text-xl sm:text-2xl font-bold">
                     {card.title}
                   </h3>
                   {card.icon}

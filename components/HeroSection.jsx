@@ -9,7 +9,7 @@ import TrustedBy from "./TrustedBy";
 
 export default function HeroSection() {
   return (
-    <section className="pt-6 pb-20 px-4 sm:px-8 md:px-12 lg:px-20 relative">
+    <section className="pt-4 pb-20 px-4 sm:px-8 md:px-12 lg:px-20 relative">
       <div className="max-w-8xl mx-auto">
         <div 
           className="rounded-3xl px-6 sm:px-8 md:px-12 py-12 sm:py-16 md:py-20 relative overflow-hidden"
@@ -31,49 +31,44 @@ export default function HeroSection() {
                 animation: 'slideUp 0.8s ease-out 0s forwards'
               }}
             >
-              <h1 
-  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-9xl italic font-bold"
-  style={{
-    lineHeight: 1.05, // tighter spacing than before
-    letterSpacing: '-0.03em',
-    fontFamily: "'Montserrat', sans-serif",
-  }}
->
-  <span 
-    className="block"
-    style={{ 
-      background: 'linear-gradient(135deg, #ffffff 0%, #e5e5e5 50%, #b3b3b3 100%)',
-      WebkitBackgroundClip: 'text',
-      backgroundClip: 'text',
-      WebkitTextFillColor: 'transparent'
-    }}
-  >
-    Fractional GTM service
-  </span>
-  <span 
-    className="block"
-    style={{ 
-      background: 'linear-gradient(135deg, #f5f5f5 0%, #cfcfcf 50%, #8c8c8c 100%)',
-      WebkitBackgroundClip: 'text',
-      backgroundClip: 'text',
-      WebkitTextFillColor: 'transparent'
-    }}
-  >
-    for Early-Stage
-  </span>
-  <span 
-    className="block"
-    style={{ 
-      background: 'linear-gradient(135deg, #eaeaea 0%, #a6a6a6 50%, #595959 100%)',
-      WebkitBackgroundClip: 'text',
-      backgroundClip: 'text',
-      WebkitTextFillColor: 'transparent'
-    }}
-  >
-    Startups
-  </span>
-</h1>
-
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-9xl font-bold leading-tight" style={{
+                lineHeight: 0.9,
+                letterSpacing: '-0.04em'
+              }}>
+                <span 
+                  className="block"
+                  style={{ 
+                    background: 'linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(0 0% 85%) 50%, hsl(0 0% 70%) 100%)',
+                    WebkitBackgroundClip: 'text',
+                    backgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent'
+                  }}
+                >
+                  Fractional GTM service
+                </span>
+                <span 
+                  className="block"
+                  style={{ 
+                    background: 'linear-gradient(135deg, hsl(0 0% 80%) 0%, hsl(0 0% 65%) 50%, hsl(0 0% 50%) 100%)',
+                    WebkitBackgroundClip: 'text',
+                    backgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent'
+                  }}
+                >
+                  for Early-Stage
+                </span>
+                <span 
+                  className="block"
+                  style={{ 
+                    background: 'linear-gradient(135deg, hsl(0 0% 80%) 0%, hsl(0 0% 65%) 50%, hsl(0 0% 50%) 100%)',
+                    WebkitBackgroundClip: 'text',
+                    backgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent'
+                  }}
+                >
+                  Startups
+                </span>
+              </h1>
 
               {/* Description */}
               <p 

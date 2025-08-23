@@ -40,8 +40,8 @@ export function ChallengeSection() {
           }}
           className="space-y-2"
         >
-          <h3 className="text-foreground font-semibold text-2xl">{challenge.title}</h3>
-          <p className="text-muted-foreground text-gray-400 text-xl leading-relaxed">{challenge.description}</p>
+          <h3 className="text-2xl sm:text-3xl md:text-3xl ">{challenge.title}</h3>
+          <p className="text-muted-foreground text-gray-400 text-lg leading-relaxed">{challenge.description}</p>
         </motion.div>
       ))}
     </div>

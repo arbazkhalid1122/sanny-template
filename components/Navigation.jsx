@@ -18,17 +18,17 @@ export default function Navigation() {
 
   return (
     <nav 
-      className={`fixed ${isAtTop ? 'top-10' : 'top-0'} w-full z-500`}
+      className={`fixed ${isAtTop ? 'top-10' : 'top-5'} w-full z-500`}
       style={{ animation: 'fadeIn 0.6s ease-out 0s forwards' }}
     >
-      <div className="max-w-5xl mx-auto py-6 px-4 sm:px-2">
+      <div className="max-w-5xl mx-auto ">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div 
             className="flex items-center space-x-2 rounded-full px-4 py-2.5 border 
                        bg-white/10 backdrop-blur-lg border-white/10"
           >
-            <span className="text-white font-bold text-lg">Fractional GTM</span>
+            <span className="text-white font-bold text-lg">Clarus</span>
             {/* <span className="text-zinc-400">®</span> */}
             <ChevronUp className="w-4 h-4 text-zinc-400" />
           </div>

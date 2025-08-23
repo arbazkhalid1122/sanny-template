@@ -45,7 +45,7 @@ export default function FAQSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-2xl sm:text-3xl md:text-4xl font-semi-bold mb-4 sm:mb-6"
+          className="text-2xl sm:text-3xl md:text-3xl mb-4 sm:mb-6"
         >
           FAQ
         </motion.h2>
@@ -61,7 +61,7 @@ export default function FAQSection() {
         >
           <Accordion type="single" collapsible className="space-y-[2px]">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border-gray-800 bg-[#18191b] rounded-lg px-4 sm:px-6 pt-2">
+              <AccordionItem key={index} value={`item-${index}`} className="border-none bg-[#18191b] rounded-lg px-4 sm:px-6 pt-2">
                 <AccordionTrigger className="text-left text-white text-base sm:text-lg">
                   {faq.question}
                 </AccordionTrigger>

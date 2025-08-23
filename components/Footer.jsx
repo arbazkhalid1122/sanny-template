@@ -9,7 +9,7 @@ export default function Footer() {
     <div className="bg-black text-white flex flex-col items-center justify-center py-12 sm:py-16 px-4 sm:px-6">
       <div className="max-w-5xl w-full space-y-6">
         {/* Heading */}
-        <h2 className="text-2xl sm:text-3xl font-semibold text-start">Still not sure?</h2>
+        <h2 className="text-2xl sm:text-3xl md:text-3xl text-start">Still not sure?</h2>
 
         {/* Subtext */}
         <div className="text-start">

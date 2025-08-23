@@ -2,42 +2,49 @@
 
 import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
-
-import { fadeInUp, staggerContainer, scaleIn } from "@/lib/animations"
+import { staggerContainer, scaleIn } from "@/lib/animations"
 import { Starburst } from "./StartBust"
+import { MorphingTriangles } from "./MorphingIcons"
+import { EmbedShape } from "./MorphingIcons"
+import { TransferKnowledgeShape } from "./MorphingIcons"
+import { BuildFoundationsShape } from "./MorphingIcons"
 
 export default function HowItWorks() {
   const steps = [
     {
-      step: "Step 1",
-      title: "Subscribe",
+      title: "Embed",
       description:
-        "If our services is a good fit, start your subscription. Access your project board, and we'll reach out the same day for a productive discussion. Plans & Pricing →",
+        "Our small team of experienced GTM experts will embed with you for a defined period (2-4 months).",
       bg: "bg-white text-black",
+      icon: <EmbedShape />,
     },
     {
-      step: "Step 2",
-      title: "Share your vision",
+      title: "Transfer Knowledge",
       description:
-        "Once we have your vision, we'll analyse your goals, business requirements and constraints, break the project into bite-sized tasks, and start implementing.",
+        "Our goal is not to be a permanent fixture. We will work to train you and your team, transferring our knowledge and a repeatable playbook to you.",
       bg: "bg-[#18191B] text-white",
+      icon: <TransferKnowledgeShape />,
     },
     {
-      step: "Step 3",
-      title: "Continuous results",
+      title: "Build Foundations",
       description:
-        "Our team effectively covers your tasks and implements AI as a strategic asset, ensuring it becomes an integral part of your company's workflow.",
+        " We will work closely with you to build and implement core GTM systems, including:",
+      features: [
+        "Positioning & Storytelling",
+        "Acquisition and Retention Pipelines",
+        "GTM Strategy and Execution"
+      ],
       bg: "bg-[#18191B] text-white",
+      icon: <BuildFoundationsShape />,
     },
     {
-      step: "Step 4",
-      title: "Enjoy the growth",
+      title: "Transition & Support",
       description:
-        "Our results drive your business growth, which is our main goal. We offer detailed instructions, training, and tech support as long as you need to maximize our work's value.",
+        "After the initial engagement, we will quietly remove ourselves, providing ongoing support on an as-needed basis to ensure a smooth transition.",
       bg: "bg-[#18191B] text-white",
+      special: true,
     },
   ]
-
 
   return (
     <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
@@ -47,32 +54,61 @@ export default function HowItWorks() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-2xl sm:text-3xl md:text-3xl mb-12 sm:mb-16"
+          className="text-2xl sm:text-3xl md:text-3xl mb-2"
         >
-          How it works?
+          Fractional GTM service for early stage startups
         </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          viewport={{ once: true }}
+          className="text-gray-400 text-base sm:text-lg mb-10 sm:mb-14 max-w-2xl"
+        >
+          We offer flexible engagement models designed to meet your specific needs. Even if you already have a growth and marketing team, our services can provide high-impact value by:
+        </motion.p>
 
         <motion.div
           variants={staggerContainer}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-1"
+          className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-2 md:gap-2 items-stretch"
         >
           {steps.map((item, index) => (
-            <motion.div key={index} variants={scaleIn}>
-              <Card className={`${item.bg} rounded-4xl border-0 h-[fit-content] p-0 w-[fit-content]`}>
-                <CardContent className="p-6 sm:p-8 md:p-10 w-[fit-content]">
-                  <div className={`text-sm sm:text-lg pr-2 pl-2 font-bold ${index === 3 ? '' : 'mb-24 sm:mb-28 md:mb-36'} opacity-70 border-1 ${index === 0 ? 'border-black' : 'border-white'} w-[fit-content] rounded-2xl pl-1 pr-1`}>{item.step}</div>
-                  {index === 3 && <Starburst className="mx-auto my-10" />}
-                  <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">{item.title}</h3>
-                  <p className="leading-relaxed opacity-80 text-sm sm:text-base">{item.description}</p>
-                  {item.icon && <div className="mt-4 sm:mt-6 text-3xl sm:text-4xl opacity-30">{item.icon}</div>}
+            <motion.div key={index} variants={scaleIn} className="flex">
+              <Card
+                className={`${item.bg} rounded-4xl border-0 w-full h-full flex p-0`}
+              >
+                <CardContent className="p-6 sm:p-8 md:p-10 w-full flex flex-col justify-between">
+                  <div className="flex justify-center items-center mb-4">
+                    {item.special ? <Starburst /> : item.icon}
+                  </div>
+                  <div>
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="leading-relaxed opacity-80 text-sm sm:text-base">
+                    {item.description}
+                  </p>
+                  {item.features && (
+                    <ul className="list-disc pl-5 mt-2 text-sm sm:text-base opacity-80">
+                      {item.features.map((feature, i) => (
+                        <li key={i} className="mb-1">
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>
           ))}
         </motion.div>
+
+
       </div>
     </section>
   )

@@ -2,19 +2,13 @@
 
 import Navigation from "@/components/Navigation"
 import HeroSection from "@/components/HeroSection"
-import ValueProposition from "@/components/ValueProposition"
-import TrustedBy from "@/components/TrustedBy"
 import HowItWorks from "@/components/HowItWorks"
-import ServicesSection from "@/components/ServicesSection"
 import Testimonials from "@/components/Testimonials"
 import PricingSection from "@/components/PricingSection"
-import SuccessStories from "@/components/SuccessStories"
 import TeamSection from "@/components/TeamSection"
 import FAQSection from "@/components/FAQSection"
 import Footer from "@/components/Footer"
 import SuitableSection from "@/components/Suitable"
-import FeatureSection from "@/components/FeatureSection"
-import { MorphingCircles } from "@/components/MorphingCircles"
 import Problems from "@/components/Problems"
 
 export default function SannyLandingPage() {
@@ -24,12 +18,11 @@ export default function SannyLandingPage() {
       <HeroSection />
       <Problems />
       <HowItWorks />
-      <FeatureSection />
+      {/* <FeatureSection /> */}
       {/* <ServicesSection /> */}
       <SuitableSection />
       <Testimonials />
       <PricingSection />
-      <SuccessStories />
       <TeamSection />
       <FAQSection />
       <Footer />

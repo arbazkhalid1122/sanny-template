@@ -11,25 +11,13 @@ export function GTMCard({ title, subtitle, className = "" }) {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={'w-full ' + className}
     >
-      <Card className="bg-[#DBEA39] text-card-foreground p-8 rounded-3xl relative overflow-hidden">
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3, duration: 0.5 }}>
-          <h2 className="text-2xl font-semibold text-black mb-4 leading-tight">{title}</h2>
-          <p className="text-sm opacity-80 text-black mt-50 leading-relaxed">{subtitle}</p>
+      <Card className=" text-card-foreground  rounded-3xl relative overflow-hidden border-none h-full">
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3, duration: 0.5 }} className="flex h-full justify-between flex-col ">
+          <h2 className="text-4xl font-semibold text-white mb-4 leading-tight">Closing the GTM Gap for <span className="text-[#DBEA39]">Early-Stage Startups</span></h2>
+          <p className="text-md opacity-80 text-white leading-relaxed">{subtitle}</p>
         </motion.div>
 
-        {/* Connecting line */}
-        <motion.div
-          className="absolute -bottom-4 left-8 w-px h-8 bg-card-foreground/20"
-          initial={{ scaleY: 0 }}
-          animate={{ scaleY: 1 }}
-          transition={{ delay: 0.8, duration: 0.4 }}
-        />
-        <motion.div
-          className="absolute -bottom-4 left-8 w-16 h-px bg-card-foreground/20"
-          initial={{ scaleX: 0 }}
-          animate={{ scaleX: 1 }}
-          transition={{ delay: 1.0, duration: 0.4 }}
-        />
+     
       </Card>
     </motion.div>
   )
