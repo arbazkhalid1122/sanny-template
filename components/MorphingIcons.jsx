@@ -10,7 +10,7 @@ export function BuildFoundationsShape() {
       height="200"
       viewBox="0 0 450 300"
       xmlns="http://www.w3.org/2000/svg"
-      className="mx-auto my-10"
+      className="mx-auto my-10 flex items-center justify-center"
     >
       {/* Base layer */}
       <motion.rect
@@ -109,7 +109,7 @@ export function TransferKnowledgeShape() {
       height="250"
       viewBox="0 0 450 250"
       xmlns="http://www.w3.org/2000/svg"
-      className="mx-auto my-10"
+      className="mx-auto my-10 flex items-center justify-center"
     >
       {/* Left box (source of knowledge) */}
       <motion.rect
@@ -196,7 +196,7 @@ export function EmbedShape() {
       height="250"
       viewBox="0 0 400 250"
       xmlns="http://www.w3.org/2000/svg"
-      className="mx-auto my-10"
+      className="mx-auto my-10 flex items-center justify-center"
     >
       {/* Outer embed box */}
       <motion.rect
@@ -272,7 +272,7 @@ export function MorphingSquares() {
       height="250"
       viewBox="0 0 500 500"
       xmlns="http://www.w3.org/2000/svg"
-      className="mx-auto"
+      className="mx-auto flex items-center justify-center"
     >
       <motion.rect
         x="150"
@@ -309,7 +309,7 @@ export function MorphingTriangles() {
       height="250"
       viewBox="0 0 500 500"
       xmlns="http://www.w3.org/2000/svg"
-      className="mx-auto"
+      className="mx-auto flex items-center justify-center"
     >
       <motion.polygon
         stroke="currentColor"
@@ -339,7 +339,7 @@ export function MorphingCircles() {
       height="250"
       viewBox="0 0 500 500"
       xmlns="http://www.w3.org/2000/svg"
-      className="mx-auto"
+      className="mx-auto flex items-center justify-center"
     >
       <motion.circle
         cx="250"

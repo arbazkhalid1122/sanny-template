@@ -21,7 +21,7 @@ export default function Navigation() {
       className={`fixed ${isAtTop ? 'top-10' : 'top-5'} w-full z-500`}
       style={{ animation: 'fadeIn 0.6s ease-out 0s forwards' }}
     >
-      <div className="max-w-5xl mx-auto ">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-0">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div 

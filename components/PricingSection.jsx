@@ -37,7 +37,7 @@ export default function PricingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-2xl sm:text-3xl md:text-3xl mb-2"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6"
         >
           Engagement Models
         </motion.h2>
@@ -47,7 +47,7 @@ export default function PricingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
-          className="text-gray-400 text-base sm:text-lg mb-10 sm:mb-14 max-w-2xl"
+          className="text-gray-400 text-sm sm:text-base md:text-lg mb-8 sm:mb-10 md:mb-14 max-w-2xl leading-relaxed"
         >
           We offer flexible engagement models designed to meet your specific needs. Even if you already have a growth and marketing team, our services can provide high-impact value by:
         </motion.p>
@@ -57,32 +57,32 @@ export default function PricingSection() {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-1 w-full max-w-none"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 w-full max-w-none"
         >
           <motion.div variants={scaleIn}>
-            <Card className="bg-[#18191B] border-0 h-full w-full rounded-4xl min-h-[450px]">
-              <CardContent className="p-6 sm:p-8 flex flex-col justify-between h-full">
-                <div className="text-xl sm:text-2xl font-bold text-white">Foundational Sprint</div>
+            <Card className="bg-[#18191B] border-0 h-full w-full rounded-2xl sm:rounded-3xl lg:rounded-4xl min-h-[400px] sm:min-h-[450px]">
+              <CardContent className="p-4 sm:p-6 md:p-8 flex flex-col justify-between h-full">
+                <div className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-4 sm:mb-6">Foundational Sprint</div>
               
-                <p>A 2-4 month intensive engagement focused on building and implementing a core GTM playbook. This is ideal for pre-seed and seed-stage startups.</p>
+                <p className="text-sm sm:text-base text-gray-300 leading-relaxed">A 2-4 month intensive engagement focused on building and implementing a core GTM playbook. This is ideal for pre-seed and seed-stage startups.</p>
               </CardContent>
             </Card>
           </motion.div>
 
           <motion.div variants={scaleIn}>
-            <Card className="bg-white border-0 h-full w-full rounded-4xl">
-              <CardContent className="p-6 sm:p-8 flex flex-col justify-between h-full">
-                <div className="text-xl sm:text-2xl font-bold text-black">Strategic Advisory</div>
-                <p className="text-black"> An ongoing, retainer-based model where we act as a strategic sounding board and provide on-demand support for your growth and marketing team.</p>
+            <Card className="bg-white border-0 h-full w-full rounded-2xl sm:rounded-3xl lg:rounded-4xl min-h-[400px] sm:min-h-[450px]">
+              <CardContent className="p-4 sm:p-6 md:p-8 flex flex-col justify-between h-full">
+                <div className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-4 sm:mb-6">Strategic Advisory</div>
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed"> An ongoing, retainer-based model where we act as a strategic sounding board and provide on-demand support for your growth and marketing team.</p>
               </CardContent>
             </Card>
           </motion.div>
 
-            <motion.div variants={scaleIn}>
-            <Card className="bg-[#18191B] border-0 h-full w-full rounded-4xl">
-              <CardContent className="p-6 sm:p-8 flex flex-col justify-between h-full">
-                <div className="text-xl sm:text-2xl font-bold text-white">Project-Based</div>
-                <p className=""> For specific, high-priority initiatives, such as a new product launch, a new market entry, or a full GTM audit.</p>
+            <motion.div variants={scaleIn} className="md:col-span-2 lg:col-span-1">
+            <Card className="bg-[#18191B] border-0 h-full w-full rounded-2xl sm:rounded-3xl lg:rounded-4xl min-h-[400px] sm:min-h-[450px]">
+              <CardContent className="p-4 sm:p-6 md:p-8 flex flex-col justify-between h-full">
+                <div className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-4 sm:mb-6">Project-Based</div>
+                <p className="text-sm sm:text-base text-gray-300 leading-relaxed"> For specific, high-priority initiatives, such as a new product launch, a new market entry, or a full GTM audit.</p>
               </CardContent>
             </Card>
           </motion.div>
@@ -96,17 +96,17 @@ export default function PricingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mt-4 sm:mt-6 md:mt-2 w-full"
+          className="mt-6 sm:mt-8 md:mt-10 w-full"
         >
-          <Card className="bg-[#18191B] border-gray-800 w-full rounded-4xl p-0">
-            <CardContent className="p-6 sm:p-8 md:p-12">
-              <h3 className="text-xl sm:text-2xl font-bold mb-2 text-white">Custom offer</h3>
-              <p className="text-gray-300 text-base sm:text-lg mb-4 sm:mb-6">
+          <Card className="bg-[#18191B] border-gray-800 w-full rounded-2xl sm:rounded-3xl lg:rounded-4xl p-0">
+            <CardContent className="p-4 sm:p-6 md:p-8 lg:p-12">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 text-white">Custom offer</h3>
+              <p className="text-gray-300 text-sm sm:text-base md:text-lg mb-4 sm:mb-6 leading-relaxed">
                 Our goal is not to replace your existing team, but to empower them. We work alongside your professionals to fill knowledge gaps, accelerate learning, and provide an unbiased outside perspective.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-                <Button className="w-full sm:w-auto bg-white text-black hover:bg-gray-700 rounded-lg p-6 sm:p-7 text-base sm:text-lg font-semibold">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-start sm:items-center">
+                <Button className="w-full sm:w-auto bg-white text-black hover:bg-gray-700 rounded-lg p-4 sm:p-6 text-sm sm:text-base md:text-lg font-semibold">
                   Book call
                 </Button>
                 {/* <p className="text-gray-300 text-sm sm:text-lg">

@@ -30,7 +30,7 @@ const cards = [
     subtitle: "AI product from scratch",
     description:
       "Your founding team and any early hires will be equipped with the knowledge and tools they need to drive growth long after our engagement is complete.",
-    theme: "dark-neutral",
+    theme: "dark-blue",
   },
   {
     title: "Cost-Effective Expertise",
@@ -46,7 +46,7 @@ const cards = [
     subtitle: "Scalable solutions",
     description:
       "Showcase to investors that you have a clear, executable GTM plan, increasing your chances of securing future funding.",
-    theme: "dark-gradient",
+    theme: "dark-blue",
   },
 ];
 
@@ -96,11 +96,14 @@ export default function SuitableSection() {
                       : card.theme === "dark-neutral"
                       ? "bg-[#18191b] text-white" // matte black-gray
                       : card.theme === "dark-blue"
-                      ? "bg-[#1e293b] text-white" // slate/blue-gray
+                      ? " text-white" // slate/blue-gray
                       : card.theme === "dark-gradient"
                       ? "bg-gradient-to-br from-[#0f172a] via-[#1e1e1e] to-[#2c2d31] text-white" // gradient
                       : "bg-white text-black" // default white
                   }`}
+                  style={{
+                    background:card.theme === 'dark-blue' ? 'linear-gradient(180deg,#0f1112 50.999999046325684%,#acb3b6)' : '',
+                  }}
               >
                 <CardContent className="p-6 sm:p-8 space-y-4 sm:space-y-6">
                   <h3 className="text-xl sm:text-2xl font-bold">

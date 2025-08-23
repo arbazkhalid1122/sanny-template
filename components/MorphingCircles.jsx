@@ -12,7 +12,7 @@ export function MorphingCircles() {
       height="300"
       viewBox="0 0 500 500"
       xmlns="http://www.w3.org/2000/svg"
-      className="mx-auto my-10"
+      className="mx-auto my-10 flex items-center justify-center"
     >
       {/* left circle */}
       <motion.ellipse

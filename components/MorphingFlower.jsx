@@ -44,7 +44,7 @@ export function MorphingFlower() {
       height="300"
       viewBox="0 0 500 500"
       xmlns="http://www.w3.org/2000/svg"
-      className="mx-auto my-10 bg-[#dbea39]"
+      className="mx-auto my-10 bg-[#dbea39] flex items-center justify-center"
     >
       {circles.map((circle, i) => (
         <motion.ellipse

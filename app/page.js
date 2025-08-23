@@ -14,18 +14,20 @@ import Problems from "@/components/Problems"
 export default function SannyLandingPage() {
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden cursor-custom">
-      <Navigation />
-      <HeroSection />
-      <Problems />
-      <HowItWorks />
-      {/* <FeatureSection /> */}
-      {/* <ServicesSection /> */}
-      <SuitableSection />
-      <Testimonials />
-      <PricingSection />
-      <TeamSection />
-      <FAQSection />
-      <Footer />
+      <div className="max-w-[1920px] mx-auto">
+        <Navigation />
+        <HeroSection />
+        <Problems />
+        <HowItWorks />
+        {/* <FeatureSection /> */}
+        {/* <ServicesSection /> */}
+        <SuitableSection />
+        <Testimonials />
+        <PricingSection />
+        {/* <TeamSection /> */}
+        <FAQSection />
+        <Footer />
+      </div>
     </div>
   )
 }

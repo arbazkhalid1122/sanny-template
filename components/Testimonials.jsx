@@ -45,28 +45,28 @@ export default function Testimonials() {
     <section className="py-12 sm:py-20 px-4 sm:px-8 bg-black text-white">
       <div className="max-w-5xl mx-auto">
         {/* Top Header */}
-        <div className="flex justify-between items-center mb-10">
-          <h2 className="text-2xl sm:text-3xl md:text-3xl leading-snug max-w-md">
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 lg:gap-8 mb-8 sm:mb-10">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight max-w-md lg:max-w-lg">
             Real Stories from the Frontlines
           </h2>
-          <p className="text-gray-400 mt-3 max-w-md ">
+          <p className="text-gray-400 text-sm sm:text-base lg:text-lg max-w-md lg:max-w-lg leading-relaxed">
             Our services are loved by founders around the all world. We are
             proud to work with innovative startups and companies.
           </p>
         </div>
 
-        <div className="flex gap-3 mt-4 sm:mt-0 justify-end mb-6">
+        <div className="flex gap-3 justify-end mb-6 sm:mb-8">
           <button
             onClick={handlePrev}
-            className="p-2 rounded-full bg-neutral-800 hover:bg-neutral-700"
+            className="p-2 sm:p-3 rounded-full bg-neutral-800 hover:bg-neutral-700 transition-colors"
           >
-            <ChevronLeft className="w-5 h-5" />
+            <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
           <button
             onClick={handleNext}
-            className="p-2 rounded-full bg-neutral-800 hover:bg-neutral-700"
+            className="p-2 sm:p-3 rounded-full bg-neutral-800 hover:bg-neutral-700 transition-colors"
           >
-            <ChevronRight className="w-5 h-5" />
+            <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
         </div>
 
@@ -76,10 +76,10 @@ export default function Testimonials() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="grid md:grid-cols-2 gap-6 items-center"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-center"
         >
           {/* Left Image */}
-          <div className="relative w-full h-72 sm:h-96 rounded-2xl overflow-hidden flex">
+          <div className="relative w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-xl sm:rounded-2xl overflow-hidden flex order-2 lg:order-1">
             <Image
               src={testimonials[current].avatar}
               alt={testimonials[current].name}
@@ -90,15 +90,15 @@ export default function Testimonials() {
           </div>
 
           {/* Right Card */}
-          <div className="bg-neutral-900 p-6 sm:p-10 rounded-2xl flex flex-col justify-end h-72 sm:h-96">
-            <p className="text-gray-200 text-lg leading-relaxed mb-6">
+          <div className="bg-neutral-900 p-4 sm:p-6 md:p-8 lg:p-10 rounded-xl sm:rounded-2xl flex flex-col justify-end h-64 sm:h-72 md:h-80 lg:h-96 order-1 lg:order-2">
+            <p className="text-gray-200 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
               {testimonials[current].content}
             </p>
             <div>
-              <h4 className="font-semibold text-white">
+              <h4 className="font-semibold text-white text-base sm:text-lg">
                 {testimonials[current].name}
               </h4>
-              <p className="text-gray-400 text-sm">{testimonials[current].role}</p>
+              <p className="text-gray-400 text-xs sm:text-sm">{testimonials[current].role}</p>
             </div>
           </div>
         </motion.div>
