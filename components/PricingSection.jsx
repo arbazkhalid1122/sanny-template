@@ -93,7 +93,7 @@ export default function PricingSection() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 w-full max-w-none "
         >
           <motion.div variants={scaleIn}>
-            <Card className="bg-[#18191B] border-0 h-full w-full rounded-2xl sm:rounded-3xl lg:rounded-4xl">
+            <Card className="bg-[#18191B] border-0 h-full w-full rounded-2xl sm:rounded-3xl lg:rounded-4xl min-h-[400px] sm:min-h-[450px]">
               <CardContent className="p-4 sm:p-6 md:p-7 flex flex-col justify-between h-full">
                 <div className="flex ">
                   <QuickOnboardingIcon size={30} />
@@ -106,8 +106,8 @@ export default function PricingSection() {
           </motion.div>
 
           <motion.div variants={scaleIn}>
-            <Card className="bg-white border-0 w-full rounded-2xl sm:rounded-3xl lg:rounded-4xl ">
-              <CardContent className="p-4 sm:p-6 md:p-8 flex flex-col justify-between">
+            <Card className="bg-white border-0 h-full w-full rounded-2xl sm:rounded-3xl lg:rounded-4xl min-h-[400px] sm:min-h-[450px]">
+              <CardContent className="p-4 sm:p-6 md:p-8 flex flex-col justify-between h-full">
                 <div className="flex text-black gap-2">
                   <UpdatesWeeklyIcon size={30} />
                   <div className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-2">Strategic Advisory</div>
@@ -118,8 +118,8 @@ export default function PricingSection() {
           </motion.div>
 
           <motion.div variants={scaleIn} className="md:col-span-2 lg:col-span-1">
-            <Card className="bg-[#18191B] border-0 h-full w-full rounded-2xl sm:rounded-3xl lg:rounded-4xl ">
-              <CardContent className="p-4 sm:p-6 md:p-8 flex flex-col justify-between">
+            <Card className="bg-[#18191B] border-0 h-full w-full rounded-2xl sm:rounded-3xl lg:rounded-4xl min-h-[400px] sm:min-h-[450px]">
+              <CardContent className="p-4 sm:p-6 md:p-8 flex flex-col justify-between h-full">
                 <div className="flex gap-2">
                   <GuaranteeIcon size={30} />
                   <div className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2">Project-Based</div>

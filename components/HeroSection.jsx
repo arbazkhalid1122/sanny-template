@@ -25,7 +25,7 @@ export default function HeroSection() {
               }}
             >
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-9xl font-bold leading-tight" style={{
-                lineHeight: 0.9,
+                lineHeight: 1.1,
                 letterSpacing: '-0.04em'
               }}>
                 <span 
@@ -48,7 +48,7 @@ export default function HeroSection() {
                     WebkitTextFillColor: 'transparent'
                   }}
                 >
-                  for <span className="font-caveat font-semibold">Early-Stage</span>
+                  for <span className="font-caveat font-semibold ">Early-Stage</span>
                 </span>
                 <span 
                   className="block"
