@@ -49,7 +49,7 @@ export default function FAQSection() {
         >
           FAQ
         </motion.h2>
-        <p className="text-gray-400 text-base sm:text-lg mb-10 sm:mb-14 max-w-lg">
+        <p className="text-white opacity-80 text-sm sm:text-base mb-10 sm:mb-14 max-w-lg">
           Fractional GTM service for Early-Stage Startups
         </p>
 
@@ -65,7 +65,7 @@ export default function FAQSection() {
                 <AccordionTrigger className="text-left text-white text-base sm:text-lg">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-gray-400 text-sm sm:text-lg">{faq.answer}</AccordionContent>
+                <AccordionContent className="text-white opacity-80 text-sm sm:text-base">{faq.answer}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>

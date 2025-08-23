@@ -13,9 +13,9 @@ export default function Footer() {
 
         {/* Subtext */}
         <div className="text-start">
-          <p className="text-gray-300 mb-8 sm:mb-12 text-base sm:text-lg leading-relaxed max-w-2xl">
+          <p className="text-white opacity-80 mb-8 sm:mb-12 text-sm sm:text-base leading-relaxed max-w-2xl">
             Contact us to learn more about{" "}
-            <span className="font-medium">Fractional GTM Automation Agency</span> and
+            <span className="">Fractional GTM Automation Agency</span> and
             figure out how your team can change the way they work with AI
           </p>
         </div>
@@ -29,7 +29,7 @@ export default function Footer() {
         </Button>
 
         {/* Email Contact */}
-        <p className="text-gray-300 text-base sm:text-lg text-center">
+        <p className="text-white opacity-80 text-sm sm:text-base text-center">
           or mail us at{" "}
           <Link
             href="mailto:hey@fractionalgtm"
@@ -41,17 +41,17 @@ export default function Footer() {
         </p>
 
         {/* Footer */}
-        <div className="flex flex-col md:flex-row justify-between items-center text-sm sm:text-base text-white/60 pt-6 sm:pt-8 gap-4 border-b pb-6 sm:pb-8 border-gray-900">
+        <div className="flex flex-col md:flex-row justify-between items-center text-sm sm:text-base text-white opacity-80 pt-6 sm:pt-8 gap-4 border-b pb-6 sm:pb-8 border-gray-900">
           <span>2025 © Fractional GTM® AI Agency Inc.</span>
 
           <div className="flex items-center gap-3 sm:gap-4 flex-wrap justify-center">
-            <Link href="#" className="hover:text-gray-500">
+            <Link href="#" className="hover:text-gray-500 text-white opacity-80">
               LinkedIn
             </Link>
-            <Link href="#" className="hover:text-gray-500">
+            <Link href="#" className="hover:text-gray-500 text-white opacity-80">
               Twitter
             </Link>
-             <Link href="#" className="hover:text-gray-500">
+             <Link href="#" className="hover:text-gray-500 text-white opacity-80">
               Instagram
             </Link>
           </div>

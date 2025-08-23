@@ -28,9 +28,9 @@ export default function Navigation() {
             className="flex items-center space-x-2 rounded-full px-4 py-2.5 border 
                        bg-white/10 backdrop-blur-lg border-white/10"
           >
-            <span className="text-white font-bold text-lg">Clarus</span>
+            <span className="text-white font-bold text-base">Clarus</span>
             {/* <span className="text-zinc-400">®</span> */}
-            <ChevronUp className="w-4 h-4 text-zinc-400" />
+            {/* <ChevronUp className="w-4 h-4 text-zinc-400" /> */}
           </div>
 
           {/* Desktop Navigation Links */}
@@ -39,16 +39,16 @@ export default function Navigation() {
                        bg-white/10 backdrop-blur-lg border-white/10"
           >
             <div className="flex items-center space-x-4 mr-6 p-3">
-              <a href="#services" className="text-white transition-colors text-lg font-medium">
+              <a href="#services" className="text-white transition-colors text-base font-medium">
                 Solution
               </a>
-              <a href="#pricing" className="text-white transition-colors text-lg font-medium">
+              <a href="#pricing" className="text-white transition-colors text-base font-medium">
                 Why
               </a>
-              <a href="#case-studies" className="text-white transition-colors text-lg font-medium">
+              <a href="#case-studies" className="text-white transition-colors text-base font-medium">
                 Pricing
               </a>
-              <a href="#faq" className="text-white transition-colors text-lg font-medium">
+              <a href="#faq" className="text-white transition-colors text-base font-medium">
                 FAQ
               </a>
             </div>

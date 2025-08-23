@@ -13,8 +13,8 @@ export function GTMCard({ title, subtitle, className = "" }) {
     >
       <Card className=" text-card-foreground  rounded-3xl relative overflow-hidden border-none h-full">
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3, duration: 0.5 }} className="flex h-full justify-between flex-col ">
-          <h2 className="text-4xl font-semibold text-white mb-4 leading-tight">Closing the GTM Gap for <span className="text-[#DBEA39]">Early-Stage Startups</span></h2>
-          <p className="text-md opacity-80 text-white leading-relaxed">{subtitle}</p>
+          <h2 className="text-2xl sm:text-3xl md:text-3xl text-white mb-4 leading-tight">Closing the GTM Gap for <span className="text-[#DBEA39]">Early-Stage Startups</span></h2>
+          <p className="opacity-80 text-white leading-relaxed text-sm sm:text-base">{subtitle}</p>
         </motion.div>
 
      

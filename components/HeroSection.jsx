@@ -16,7 +16,7 @@ export default function HeroSection() {
             {/* Background decoration */}
           <div className="absolute inset-0 bg-gradient-to-r from-lime-400/5 via-transparent to-transparent blur-3xl pointer-events-none" />
           
-          <div className="max-w-5xl mx-auto z-10 mt-4 sm:mt-8 md:mt-12 lg:mt-16">
+          <div className="max-w-5xl mx-auto z-10 mt-8 sm:mt-12 md:mt-16 pt-18">
             {/* Main heading */}
             <div 
               className="space-y-4 sm:space-y-6 md:space-y-8"
@@ -37,7 +37,7 @@ export default function HeroSection() {
                     WebkitTextFillColor: 'transparent'
                   }}
                 >
-                  Fractional GTM service
+                  Fractional GTM
                 </span>
                 <span 
                   className="block"
@@ -65,7 +65,7 @@ export default function HeroSection() {
 
               {/* Description */}
               <p 
-                className="text-sm sm:text-base md:text-lg lg:text-xl text-[#ffffffcc] max-w-2xl leading-relaxed"
+                className="text-sm sm:text-base md:text-lg lg:text-xl text-[#ffffffcc] max-w-3xl leading-relaxed"
                 style={{ 
                   animation: 'fadeIn 0.6s ease-out 0.2s forwards'
                 }}
@@ -82,7 +82,7 @@ export default function HeroSection() {
               >
                 {/* Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
-                  <Button size="lg" className='bg-[#dbea39] text-black hover:bg-[#dbea39]/90 cursor-pointer w-full sm:w-auto text-sm sm:text-base'>
+                  <Button size="lg" className='bg-[#dbea39] text-black hover:bg-[#dbea39]/90 cursor-pointer w-full sm:w-auto text-xl p-7'>
                     Book call
                   </Button>
                 </div>

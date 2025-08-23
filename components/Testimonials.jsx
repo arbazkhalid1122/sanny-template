@@ -46,10 +46,10 @@ export default function Testimonials() {
       <div className="max-w-5xl mx-auto">
         {/* Top Header */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 lg:gap-8 mb-8 sm:mb-10">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight max-w-md lg:max-w-lg">
+          <h2 className="text-2xl sm:text-3xl md:text-3xl leading-tight max-w-md lg:max-w-lg ">
             Real Stories from the Frontlines
           </h2>
-          <p className="text-gray-400 text-sm sm:text-base lg:text-lg max-w-md lg:max-w-lg leading-relaxed">
+          <p className="text-white opacity-80 text-sm sm:text-base max-w-md lg:max-w-lg leading-relaxed">
             Our services are loved by founders around the all world. We are
             proud to work with innovative startups and companies.
           </p>
@@ -91,14 +91,14 @@ export default function Testimonials() {
 
           {/* Right Card */}
           <div className="bg-neutral-900 p-4 sm:p-6 md:p-8 lg:p-10 rounded-xl sm:rounded-2xl flex flex-col justify-end h-64 sm:h-72 md:h-80 lg:h-96 order-1 lg:order-2">
-            <p className="text-gray-200 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
+            <p className="text-white opacity-80 text-sm sm:text-base leading-relaxed mb-4 sm:mb-6">
               {testimonials[current].content}
             </p>
             <div>
               <h4 className="font-semibold text-white text-base sm:text-lg">
                 {testimonials[current].name}
               </h4>
-              <p className="text-gray-400 text-xs sm:text-sm">{testimonials[current].role}</p>
+              <p className="text-white opacity-80 text-sm sm:text-base">{testimonials[current].role}</p>
             </div>
           </div>
         </motion.div>

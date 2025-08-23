@@ -46,13 +46,13 @@ const cards = [
     subtitle: "Scalable solutions",
     description:
       "Showcase to investors that you have a clear, executable GTM plan, increasing your chances of securing future funding.",
-    theme: "dark-blue",
+    theme: "dark-neutral",
   },
 ];
 
 export default function SuitableSection() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { margin: "-50px", amount: 0.3 });
+  const isInView = useInView(ref, { margin: "-150px 0px -100px 0px", amount: 0.1 });
   console.log("inView:", isInView);
 
   return (
@@ -68,10 +68,10 @@ export default function SuitableSection() {
           }`}
           style={{ zIndex: 10 }}
         >
-          <h2 className="text-2xl sm:text-3xl md:text-3xl mb-2">
+          <h2 className="text-2xl sm:text-3xl md:text-3xl mb-2 ">
             Why This Matters for You
           </h2>
-          <p className="text-gray-400 text-sm sm:text-base">
+          <p className="text-white opacity-80 text-sm sm:text-base">
             Partnering with us on your GTM journey is a strategic decision that
             offers clear, tangible benefits
           </p>
@@ -106,7 +106,7 @@ export default function SuitableSection() {
                   }}
               >
                 <CardContent className="p-6 sm:p-8 space-y-4 sm:space-y-6">
-                  <h3 className="text-xl sm:text-2xl font-bold">
+                  <h3 className="text-xl sm:text-2xl">
                     {card.title}
                   </h3>
                   {card.icon}

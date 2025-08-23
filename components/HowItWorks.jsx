@@ -8,6 +8,9 @@ import { MorphingTriangles } from "./MorphingIcons"
 import { EmbedShape } from "./MorphingIcons"
 import { TransferKnowledgeShape } from "./MorphingIcons"
 import { BuildFoundationsShape } from "./MorphingIcons"
+import { Check } from "lucide-react"
+import { FaCheckCircle } from "react-icons/fa"
+import { MdOutlineCheckCircle } from "react-icons/md"
 
 export default function HowItWorks() {
   const steps = [
@@ -17,13 +20,6 @@ export default function HowItWorks() {
         "Our small team of experienced GTM experts will embed with you for a defined period (2-4 months).",
       bg: "bg-white text-black",
       icon: <EmbedShape />,
-    },
-    {
-      title: "Transfer Knowledge",
-      description:
-        "Our goal is not to be a permanent fixture. We will work to train you and your team, transferring our knowledge and a repeatable playbook to you.",
-      bg: "bg-[#18191B] text-white",
-      icon: <TransferKnowledgeShape />,
     },
     {
       title: "Build Foundations",
@@ -36,6 +32,13 @@ export default function HowItWorks() {
       ],
       bg: "bg-[#18191B] text-white",
       icon: <BuildFoundationsShape />,
+    },
+    {
+      title: "Transfer Knowledge",
+      description:
+        "Our goal is not to be a permanent fixture. We will work to train you and your team, transferring our knowledge and a repeatable playbook to you.",
+      bg: "bg-[#18191B] text-white",
+      icon: <TransferKnowledgeShape />,
     },
     {
       title: "Transition & Support",
@@ -59,15 +62,15 @@ export default function HowItWorks() {
           Fractional GTM service for early stage startups
         </motion.h2>
 
-        <motion.p
+        <p
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
-          className="text-gray-400 text-base sm:text-lg mb-10 sm:mb-14 max-w-2xl"
+          className="text-white opacity-80 text-sm sm:text-base mb-10 sm:mb-14 max-w-2xl"
         >
           We offer flexible engagement models designed to meet your specific needs. Even if you already have a growth and marketing team, our services can provide high-impact value by:
-        </motion.p>
+        </p>
 
         <motion.div
           variants={staggerContainer}
@@ -86,20 +89,21 @@ export default function HowItWorks() {
                     {item.special ? <Starburst /> : item.icon}
                   </div>
                   <div>
-                  <h3 className="text-xl sm:text-2xl font-bold mb-2">
+                  <h3 className="text-xl sm:text-2xl mb-2">
                     {item.title}
                   </h3>
                   <p className="leading-relaxed opacity-80 text-sm sm:text-base">
                     {item.description}
                   </p>
                   {item.features && (
-                    <ul className="list-disc pl-5 mt-2 text-sm sm:text-base opacity-80">
+                    <div className="mt-2 text-sm sm:text-base opacity-80">
                       {item.features.map((feature, i) => (
-                        <li key={i} className="mb-1">
+                        <div key={i} className="mb-1">
+                          <MdOutlineCheckCircle className="inline-block w-4 h-4 mr-2 text-white -mt-1" />
                           {feature}
-                        </li>
+                        </div>
                       ))}
-                    </ul>
+                    </div>
                   )}
                   </div>
                 </CardContent>

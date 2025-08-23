@@ -11,7 +11,7 @@ export default function Problems() {
     <div className="min-h-screen bg-background text-foreground p-8">
       <div className="max-w-5xl mx-auto">
         {/* Main Cards Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 mb-50">
           <GTMCard
             title="Closing the GTM Gap for Early-Stage Startups"
             subtitle="Building a great product is only half the battle. The other half is getting it to those who need it."
