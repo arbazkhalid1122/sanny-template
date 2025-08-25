@@ -40,20 +40,24 @@ export default function Navigation() {
           >
             <div className="flex items-center space-x-4 mr-6 p-3">
               <a href="#services" className="text-white transition-colors text-base font-medium">
-                Solution
+                Problem
               </a>
+              <a href="#services" className="text-white transition-colors text-base font-medium">
+                Services
+              </a>
+              
               <a href="#pricing" className="text-white transition-colors text-base font-medium">
-                Why
+                Benefits
               </a>
               <a href="#case-studies" className="text-white transition-colors text-base font-medium">
-                Pricing
+                Our approach
               </a>
               <a href="#faq" className="text-white transition-colors text-base font-medium">
                 FAQ
               </a>
             </div>
             <Button className="bg-white text-black hover:bg-white/90 rounded-full px-6 py-2 h-12 text-lg font-semibold">
-              Book 15-min call
+              Book 20-min call
             </Button>
           </div>
 
@@ -83,28 +87,28 @@ export default function Navigation() {
                 className="text-white text-lg font-medium py-2 border-b border-white/10"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Services
+                Problem
               </a>
               <a 
                 href="#pricing" 
                 className="text-white text-lg font-medium py-2 border-b border-white/10"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Pricing
+                Services
               </a>
               <a 
                 href="#case-studies" 
                 className="text-white text-lg font-medium py-2 border-b border-white/10"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Case studies
+                Benefits
               </a>
               <a 
                 href="#team" 
                 className="text-white text-lg font-medium py-2 border-b border-white/10"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Team
+                Our approach
               </a>
               <a 
                 href="#faq" 
@@ -114,7 +118,7 @@ export default function Navigation() {
                 FAQ
               </a>
               <Button className="bg-white text-black hover:bg-white/90 rounded-full px-6 py-3 h-12 text-lg font-semibold mt-4">
-                Book 15-min call
+                Book 20-min call
               </Button>
             </div>
           </div>

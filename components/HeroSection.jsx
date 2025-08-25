@@ -70,7 +70,7 @@ export default function HeroSection() {
                   animation: 'fadeIn 0.6s ease-out 0.2s forwards'
                 }}
               >
-                We offer a result driven embedded GTM service that provides you with high-impact expertise without the long-term financial commitment of a full-time hire.
+                We help founders and early-stage teams get to market faster with an embedded GTM service that delivers expertise and impact without the cost of a full-time hire.
               </p>
 
               {/* CTA Buttons and Social Proof */}

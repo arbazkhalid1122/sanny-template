@@ -34,7 +34,7 @@ const cards = [
   },
   {
     title: "Cost-Effective Expertise",
-    icon: <MorphingSquares  />,
+    icon: <MorphingSquares />,
     subtitle: "Smart analytics",
     description:
       "Get access to senior-level GTM talent at a fraction of the cost of a full-time hire, allowing you to invest capital in other mission-critical areas.",
@@ -63,17 +63,16 @@ export default function SuitableSection() {
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
         {/* Left side - pinned */}
         <div
-          className={`h-fit self-start pt-8 sm:pt-16 md:pt-32 w-full md:w-[250px] ${
-            isInView ? "md:fixed md:top-30" : "static"
-          }`}
+          className={`h-fit self-start pt-8 sm:pt-16 md:pt-32 w-full md:w-[500px] ${isInView ? "md:fixed md:top-30" : "static"
+            }`}
           style={{ zIndex: 10 }}
         >
-          <h2 className="text-2xl sm:text-3xl md:text-3xl mb-2 ">
+          <h2 className="text-2xl sm:text-3xl md:text-6xl mb-2 font-bold">
             Why This Matters for You
           </h2>
-          <p className="text-white opacity-80 text-sm sm:text-base">
-            Partnering with us on your GTM journey is a strategic decision that
-            offers clear, tangible benefits
+          <p className="text-white opacity-80 text-sm sm:text-base max-w-md">
+            Partnering with us on your GTM journey is a strategic decision that offers clear, tangible benefits
+            Accelerated Time-to-Market
           </p>
         </div>
 
@@ -90,20 +89,19 @@ export default function SuitableSection() {
             >
               <Card
                 className={`rounded-2xl shadow-lg border-0 
-                  ${
-                    i === 1
-                      ? "bg-[#dbea39] text-black" // yellow
-                      : card.theme === "dark-neutral"
+                  ${i === 1
+                    ? "bg-[#dbea39] text-black" // yellow
+                    : card.theme === "dark-neutral"
                       ? "bg-[#18191b] text-white" // matte black-gray
                       : card.theme === "dark-blue"
-                      ? " text-white" // slate/blue-gray
-                      : card.theme === "dark-gradient"
-                      ? "bg-gradient-to-br from-[#0f172a] via-[#1e1e1e] to-[#2c2d31] text-white" // gradient
-                      : "bg-white text-black" // default white
+                        ? " text-white" // slate/blue-gray
+                        : card.theme === "dark-gradient"
+                          ? "bg-gradient-to-br from-[#0f172a] via-[#1e1e1e] to-[#2c2d31] text-white" // gradient
+                          : "bg-white text-black" // default white
                   }`}
-                  style={{
-                    background:card.theme === 'dark-blue' ? 'linear-gradient(180deg,#0f1112 50.999999046325684%,#acb3b6)' : '',
-                  }}
+                style={{
+                  background: card.theme === 'dark-blue' ? 'linear-gradient(180deg,#0f1112 50.999999046325684%,#acb3b6)' : '',
+                }}
               >
                 <CardContent className="p-6 sm:p-8 space-y-4 sm:space-y-6">
                   <h3 className="text-xl sm:text-2xl">

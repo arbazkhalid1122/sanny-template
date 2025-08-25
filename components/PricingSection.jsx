@@ -72,7 +72,7 @@ export default function PricingSection() {
           viewport={{ once: true }}
           className="text-2xl sm:text-3xl md:text-3xl mb-4 sm:mb-2"
         >
-          Engagement Models
+          Our Approach
         </motion.h2>
 
         <p
@@ -147,9 +147,6 @@ export default function PricingSection() {
                 <Button className="w-full sm:w-auto bg-white text-black hover:bg-gray-200 rounded-lg p-4 sm:p-6 text-sm sm:text-base md:text-lg font-semibold">
                   Book call
                 </Button>
-                <p className="text-white opacity-80 text-sm sm:text-base">
-                  or mail us at <span className="text-white opacity-80 underline">hey@fractionalgtm</span>
-                </p>
               </div>
             </CardContent>
           </Card>

@@ -14,9 +14,10 @@ export default function Footer() {
         {/* Subtext */}
         <div className="text-start">
           <p className="text-white opacity-80 mb-8 sm:mb-12 text-sm sm:text-base leading-relaxed max-w-2xl">
-            Contact us to learn more about{" "}
+            {/* Contact us to learn more about{" "}
             <span className="">Fractional GTM Automation Agency</span> and
-            figure out how your team can change the way they work with AI
+            figure out how your team can change the way they work with AI */}
+            Book a clarity call
           </p>
         </div>
 
@@ -25,7 +26,7 @@ export default function Footer() {
           size="lg"
           className="w-full py-8 sm:py-12 md:py-30 text-2xl sm:text-4xl md:text-6xl font-semibold rounded-4xl bg-white text-black hover:bg-gray-100"
         >
-          Book call
+          Book Clarity Call
         </Button>
 
         {/* Email Contact */}

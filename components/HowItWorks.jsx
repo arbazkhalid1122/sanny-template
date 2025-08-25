@@ -59,7 +59,7 @@ export default function HowItWorks() {
           viewport={{ once: true }}
           className="text-2xl sm:text-3xl md:text-3xl mb-2"
         >
-          Fractional GTM service for early stage startups
+          What Clarus Can Do for You
         </motion.h2>
 
         <p
@@ -69,7 +69,7 @@ export default function HowItWorks() {
           viewport={{ once: true }}
           className="text-white opacity-80 text-sm sm:text-base mb-10 sm:mb-14 max-w-2xl"
         >
-          We offer flexible engagement models designed to meet your specific needs. Even if you already have a growth and marketing team, our services can provide high-impact value by:
+          We offer flexible engagement models designed to meet your specific needs. Even if you already have a growth and marketing team, here’s how our services can provide high-impact value
         </p>
 
         <motion.div

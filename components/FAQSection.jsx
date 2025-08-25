@@ -49,9 +49,6 @@ export default function FAQSection() {
         >
           FAQ
         </motion.h2>
-        <p className="text-white opacity-80 text-sm sm:text-base mb-10 sm:mb-14 max-w-lg">
-          Fractional GTM service for Early-Stage Startups
-        </p>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
