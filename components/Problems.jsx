@@ -11,7 +11,7 @@ export default function Problems() {
     <div className="min-h-screen bg-background text-foreground p-8">
       <div className="max-w-5xl mx-auto">
         {/* Main Cards Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 mb-10">
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12">
           <GTMCard
             title="Closing the GTM Gap for Early-Stage Startups"
             subtitle="Building a great product is hard, but it is just the beginning. A bulk of the work is building out systems to get this amazing product to your users. "
@@ -22,7 +22,6 @@ export default function Problems() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            className="flex items-center justify-center w-full lg:max-w-md"
           >
             <div className=" backdrop-blur-sm rounded-3xl p-16 w-full"
             style={{
