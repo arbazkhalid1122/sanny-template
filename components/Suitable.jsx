@@ -63,20 +63,19 @@ export default function SuitableSection() {
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
         {/* Left side - pinned */}
         <div
-          className={`h-fit self-start pt-8 sm:pt-16 md:pt-32 w-full md:w-[500px] ${isInView ? "md:fixed md:top-30" : "static"
-            }`}
+          className={`h-fit self-start pt-8 sm:pt-16 md:pt-32 w-full md:w-[500px] ${
+            isInView ? "md:fixed md:top-30" : "static"
+          }`}
           style={{ zIndex: 10 }}
         >
-          <h2 className="text-2xl sm:text-3xl md:text-6xl mb-2 font-bold">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl mb-2 font-bold leading-tight">
             Why This Matters for You
           </h2>
-          <p className="text-white opacity-80 text-sm sm:text-base max-w-md">
-            Partnering with us on your GTM journey is a strategic decision that offers clear, tangible benefits
+          <p className="text-white opacity-80 text-sm sm:text-base md:text-lg max-w-md md:max-w-none">
+            Partnering with us on your GTM journey is a strategic decision that offers clear, tangible benefits.
             Accelerated Time-to-Market
           </p>
         </div>
-
-        {/* Right side - cards in scroll flow */}
         <div className="flex flex-col gap-4 sm:gap-6 md:gap-1 justify-end items-end w-full md:col-start-2">
           {cards.map((card, i) => (
             <motion.div

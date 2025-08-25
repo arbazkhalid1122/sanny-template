@@ -24,25 +24,29 @@ const challenges = [
 export function ChallengeSection() {
   return (
     <div className="space-y-10 mt-16">
-      <div className="text-3xl max-w-3xl">Many early-stage founders face a significant challenge in building their GTM capabilities:</div>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-      {challenges.map((challenge, index) => (
-        <motion.div
-          key={challenge.title}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.5,
-            delay: index * 0.1,
-            ease: "easeOut",
-          }}
-          className="space-y-2"
-          >
-          <h3 className="text-xl sm:text-2xl ">{challenge.title}</h3>
-          <p className="text-muted-foreground text-white opacity-80 text-sm sm:text-base leading-relaxed">{challenge.description}</p>
-        </motion.div>
-      ))}
-    </div>
+      <div className="text-2xl sm:text-3xl max-w-3xl">
+        Many early-stage founders face a significant challenge in building their GTM capabilities:
       </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {challenges.map((challenge, index) => (
+          <motion.div
+            key={challenge.title}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.5,
+              delay: index * 0.1,
+              ease: "easeOut",
+            }}
+            className="space-y-2"
+          >
+            <h3 className="text-lg sm:text-xl lg:text-2xl">{challenge.title}</h3>
+            <p className="text-xs sm:text-sm lg:text-base text-muted-foreground text-white opacity-80 leading-relaxed">
+              {challenge.description}
+            </p>
+          </motion.div>
+        ))}
+      </div>
+    </div>
   )
 }
