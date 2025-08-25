@@ -11,10 +11,10 @@ export default function Problems() {
     <div className="min-h-screen bg-background text-foreground p-8">
       <div className="max-w-5xl mx-auto">
         {/* Main Cards Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 mb-50">
+        <div className="grid grid-cols-1 lg:grid-cols-2 mb-10">
           <GTMCard
             title="Closing the GTM Gap for Early-Stage Startups"
-            subtitle="Building a great product is only half the battle. The other half is getting it to those who need it."
+            subtitle="Building a great product is hard, but it is just the beginning. A bulk of the work is building out systems to get this amazing product to your users. "
             className="lg:max-w-md"
           />
 
