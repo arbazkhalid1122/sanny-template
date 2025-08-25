@@ -30,7 +30,7 @@ export default function Footer() {
         </Button>
 
         {/* Email Contact */}
-        <p className="text-white opacity-80 text-sm sm:text-base text-center">
+        {/* <p className="text-white opacity-80 text-sm sm:text-base text-center">
           or mail us at{" "}
           <Link
             href="mailto:hey@fractionalgtm"
@@ -39,7 +39,7 @@ export default function Footer() {
             <Mail size={14} />
             hey@fractionalgtm
           </Link>
-        </p>
+        </p> */}
 
         {/* Footer */}
         <div className="flex flex-col md:flex-row justify-between items-center text-sm sm:text-base text-white opacity-80 pt-6 sm:pt-8 gap-4 border-b pb-6 sm:pb-8 border-gray-900">
